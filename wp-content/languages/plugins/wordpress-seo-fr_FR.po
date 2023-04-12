@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-28 09:23:34+0000\n"
+"PO-Revision-Date: 2023-04-11 08:50:58+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,25 +43,6 @@ msgstr "Passez à la dernière version de %1$s !"
 #: src/integrations/admin/old-premium-integration.php:122
 msgid "Please %2$supdate %1$s to the latest version%3$s to ensure you can fully use all Premium settings and features."
 msgstr "Veuillez %2$smettre à jour %1$s dans sa dernière version%3$s pour vous assurer d’utiliser pleinement les réglages et fonctionnalités premium."
-
-#. translators: 1: Link tag to WordPress Hosts page on Yoast.com; 2: Link
-#. closing tag
-#: src/integrations/admin/unsupported-php-version.php:89
-msgid "Upgrading your PHP version is something your hosting provider can help you out with. If they can’t upgrade your PHP version, we advise you to consider %1$sswitching to a hosting provider%2$s that can provide the security and features a modern host should provide."
-msgstr "La mise à niveau de la version de PHP est une action pour laquelle votre hébergeur peut vous aider. S’ils ne peuvent pas le faire, nous vous invitons à envisager un %1$schangement d’hébergeur%2$s qui proposera une meilleure sécurité et des fonctionnalités plus modernes."
-
-#: src/integrations/admin/unsupported-php-version.php:85
-msgid "Can’t upgrade yourself? Ask your host!"
-msgstr "Vous ne pouvez pas faire la mise à niveau vous-même ? Demandez à votre hébergeur !"
-
-#. translators: 1: Yoast SEO, 2: Yoast SEO Premium
-#: src/integrations/admin/unsupported-php-version.php:77
-msgid "By March 1st, 2023, we’ll update the minimum PHP requirement for %1$s, %2$s and all our add-ons to PHP 7.2. This, to ensure we can keep delivering state of the art features."
-msgstr "Le 1er mars 2020, nous augmenterons les pré-requis PHP pour %1$s, %2$s et tous nos modules complémentaires à PHP 7.2. Ainsi, nous pourrons continuer à vous proposer des fonctionnalités innovantes."
-
-#: src/integrations/admin/unsupported-php-version.php:73
-msgid "Upgrade your PHP version"
-msgstr "Mettez à niveau votre version de PHP"
 
 #: inc/class-wpseo-admin-bar-menu.php:559
 msgid "WordPress.org support forums"
@@ -408,8 +389,8 @@ msgstr "Débloquer avec la version Premium !"
 
 #. translators: %s expands to the post type name.
 #. Translators: %s translates to the Post type in singular form
-#: admin/metabox/class-metabox.php:205 js/dist/block-editor.js:385
-#: js/dist/classic-editor.js:381 js/dist/elementor.js:385
+#: admin/metabox/class-metabox.php:205 js/dist/block-editor.js:175
+#: js/dist/classic-editor.js:171 js/dist/elementor.js:175
 msgid "Timestamp this %s"
 msgstr "Horodater cet(te) %s"
 
@@ -964,74 +945,9 @@ msgstr "Il semblerait que vous n’utilisez pas notre %1$smodule %2$s%3$s. %4$sA
 msgid "Below are the technical details for the error. See %1$sthis page%2$s for a more detailed explanation."
 msgstr "Vous trouverez ci-dessous les détails techniques de cette erreur. Consultez %1$scette page%2$s pour une explication détaillée."
 
-#: src/schema-templates/preparation-time.block.php:14
-msgid "Prep time"
-msgstr "Temps de préparation"
-
-#: src/schema-templates/preparation-time.block.php:12
-msgid "The time it takes to prepare the items to be used in the instructions."
-msgstr "Le temps qu’il faut pour préparer les éléments qui seront utilisés ensuite."
-
-#: src/schema-templates/preparation-time.block.php:12
-msgid "Recipe prep time"
-msgstr "Temps de préparation de la recette"
-
-#: src/schema-templates/cooking-time.block.php:12
-msgid "The time it takes to actually cook the dish."
-msgstr "Le temps qu’il faut pour cuisiner le plat."
-
-#: src/schema-templates/cooking-time.block.php:12
-msgid "Recipe cooking time"
-msgstr "Durée de cuisson de la recette"
-
 #: src/integrations/admin/workouts-integration.php:93
 msgid "Workouts"
 msgstr "Entraînements"
-
-#. translators: %1$s is the plugin name, %2$s and %3$s are a link.
-#: inc/class-addon-manager.php:370
-msgid "A new version of %1$s is available. %2$sRenew your subscription%3$s if you want to update to the latest version."
-msgstr "Une nouvelle version de %1$s est disponible. %2$sRenouvelez votre abonnement%3$s si vous souhaitez passer à la dernière version."
-
-#: src/schema-templates/recipe-instructions.block.php:16
-msgid "Enter step"
-msgstr "Saisissez une étape"
-
-#: src/schema-templates/recipe-instructions.block.php:15
-msgid "Instructions"
-msgstr "Instructions"
-
-#: src/schema-templates/recipe-instructions.block.php:15
-msgid "Instructions title"
-msgstr "Titre des instructions"
-
-#: src/schema-templates/recipe-instructions.block.php:13
-msgid "The steps of making the recipe, in the form of an ordered list with HowToStep and/or HowToSection items."
-msgstr "Les étapes de la recette, sous forme de liste ordonnée avec les éléments HowToStep et/ou HowToSection."
-
-#: src/schema-templates/recipe-instructions.block.php:13
-msgid "Recipe instructions"
-msgstr "Instructions de la recette"
-
-#: src/schema-templates/recipe-ingredients.block.php:15
-msgid "Enter an ingredient"
-msgstr "Saisissez un ingrédient"
-
-#: src/schema-templates/recipe-ingredients.block.php:14
-msgid "Ingredients"
-msgstr "Ingrédients"
-
-#: src/schema-templates/recipe-ingredients.block.php:14
-msgid "Ingredients title"
-msgstr "Titre des ingrédients"
-
-#: src/schema-templates/recipe-ingredients.block.php:12
-msgid "The ingredients used in the recipe, e.g. sugar, flour or garlic."
-msgstr "Les ingrédients utilisés dans la recette, par ex. : sucre, farine ou ail."
-
-#: src/schema-templates/recipe-ingredients.block.php:12
-msgid "Recipe ingredient(s)"
-msgstr "Ingrédient(s) de la recette"
 
 #: admin/views/class-yoast-integration-toggles.php:99
 msgid "Improve the quality of your site search! Automatically helps your users find your cornerstone and most important content in your internal search results. It also removes noindexed posts & pages from your site’s search results."
@@ -1070,8 +986,8 @@ msgstr "Découvrez comment les stats peuvent vous aider à améliorer votre cont
 msgid "Find relevant data about your content right in the Insights section in the Yoast SEO metabox. You’ll see what words you use most often and if they’re a match with your keywords! "
 msgstr "Trouvez des données pertinentes sur votre contenu directement dans la section « Stats » de l’encart Yoast SEO. Vous verrez les expressions que vous utilisez le plus et si elles correspondent à vos mots-clés ! "
 
-#: admin/views/class-yoast-feature-toggles.php:116 js/dist/block-editor.js:439
-#: js/dist/classic-editor.js:435 js/dist/elementor.js:439
+#: admin/views/class-yoast-feature-toggles.php:116 js/dist/block-editor.js:233
+#: js/dist/classic-editor.js:225 js/dist/elementor.js:233
 #: js/dist/new-settings.js:14 js/dist/new-settings.js:236
 msgid "Insights"
 msgstr "Stats"
@@ -1104,23 +1020,6 @@ msgstr "Les réglages de réseaux sociaux des publications nécessitent les mét
 #: src/deprecated/admin/views/class-view-utils.php:122
 msgid "The social appearance settings for your homepage require Open Graph metadata (which is currently disabled). You can enable this in the %1$s‘Social’ settings under the ‘Facebook’ tab%2$s."
 msgstr "Les réglages de réseaux sociaux de votre page d’accueil nécessitent les métadonnées Open Graph (actuellement désactivées). Vous pouvez les activer dans l’onglet %1$s« Réseaux sociaux », dans l’onglet « Facebook »%2$s."
-
-#: src/schema-templates/cooking-time.block.php:14
-#: js/dist/externals/schemaBlocks.js:13
-msgid "Cooking time"
-msgstr "Temps de cuisson"
-
-#: src/schema-templates/recipe-description.block.php:14
-msgid "Enter a recipe description"
-msgstr "Saisissez une description de la recette"
-
-#: src/schema-templates/recipe-description.block.php:12
-msgid "A description of the recipe."
-msgstr "Une description de la recette."
-
-#: src/schema-templates/recipe-description.block.php:12
-msgid "Recipe description"
-msgstr "Description de la recette"
 
 #: admin/views/redirects.php:22
 #: src/deprecated/src/integrations/admin/social-templates-integration.php:280
@@ -1193,27 +1092,6 @@ msgstr "%1$s Continuer vers %2$s%3$s"
 #: src/integrations/admin/addon-installation/installation-integration.php:103
 msgid "Installing and activating addons"
 msgstr "Installation et activation des modules"
-
-#: src/schema-templates/recipe.block.php:39
-msgid "Add a block to your recipe..."
-msgstr "Ajoutez un bloc à votre recette…"
-
-#: src/schema-templates/recipe.block.php:37
-msgid "Serves #"
-msgstr "# portions "
-
-#: src/schema-templates/recipe.block.php:36
-msgid "Create a Recipe in an SEO-friendly way. You can only use one Recipe block per post."
-msgstr "Créez une recette optimisée pour le référencement. Vous pouvez uniquement utiliser un bloc Recette par publication."
-
-#. translators: %1$s expands to Yoast
-#: src/schema-templates/recipe.block.php:9
-msgid "%1$s Recipe"
-msgstr "Recette %1$s"
-
-#: src/schema-templates/recipe-name.block.php:10
-msgid "Enter a recipe name"
-msgstr "Saisissez un nom de recette"
 
 #. translators: %s expands to Yoast SEO Premium.
 #: admin/class-admin.php:249
@@ -1360,17 +1238,17 @@ msgid "Something has gone wrong and we couldn't complete the optimization of you
 msgstr "Un problème est survenu et nous n’avons pas pu terminer l’optimisation de vos données SEO. Veuillez %1$srelancer le traitement%2$s."
 
 #. translators: %s expands to a mailto support link.
-#: inc/class-addon-manager.php:816
+#: inc/class-addon-manager.php:854
 msgid "If you still need support and have an active subscription for this product, please email %s."
 msgstr "Si vous avez besoin de support et disposez d’une licence active pour ce produit, veuillez nous écrire un e-mail à %s."
 
 #. translators: 1: expands to <a> that refers to the help page, 2: </a> closing
 #. tag.
-#: inc/class-addon-manager.php:813
+#: inc/class-addon-manager.php:851
 msgid "You can probably find an answer to your question in our %1$shelp center%2$s."
 msgstr "Vous pouvez probablement trouver une réponse à votre question dans notre %1$scentre d’aide%2$s."
 
-#: inc/class-addon-manager.php:810
+#: inc/class-addon-manager.php:848
 msgid "Need support?"
 msgstr "Besoin d’aide ?"
 
@@ -1709,8 +1587,8 @@ msgstr "Importez des réglages d’une autre installation %1$s en les collant ic
 msgid "Your %1$s settings:"
 msgstr "Vos réglages %1$s :"
 
-#: admin/metabox/class-metabox.php:431 js/dist/block-editor.js:456
-#: js/dist/elementor.js:439 js/dist/new-settings.js:10
+#: admin/metabox/class-metabox.php:431 js/dist/block-editor.js:250
+#: js/dist/elementor.js:233 js/dist/new-settings.js:10
 #: js/dist/new-settings.js:14 js/dist/new-settings.js:18
 #: js/dist/new-settings.js:55 js/dist/new-settings.js:209
 #: js/dist/structured-data-blocks.js:13
@@ -1955,9 +1833,9 @@ msgstr "Liens internes reçus"
 msgid "Outgoing internal links"
 msgstr "Liens internes émis"
 
-#: admin/class-meta-columns.php:111 js/dist/block-editor.js:339
-#: js/dist/classic-editor.js:335 js/dist/dashboard-widget.js:24
-#: js/dist/editor-modules.js:289 js/dist/elementor.js:339
+#: admin/class-meta-columns.php:111 js/dist/block-editor.js:129
+#: js/dist/classic-editor.js:125 js/dist/dashboard-widget.js:24
+#: js/dist/editor-modules.js:79 js/dist/elementor.js:129
 msgid "Keyphrase"
 msgstr "Requête"
 
@@ -2092,8 +1970,8 @@ msgstr "Requête cible non définie."
 #: admin/class-premium-popup.php:81
 #: admin/class-premium-upsell-admin-block.php:67
 #: admin/watchers/class-slug-change-watcher.php:223
-#: src/presenters/admin/sidebar-presenter.php:61 js/dist/block-editor.js:365
-#: js/dist/classic-editor.js:361 js/dist/elementor.js:365
+#: src/presenters/admin/sidebar-presenter.php:61 js/dist/block-editor.js:155
+#: js/dist/classic-editor.js:151 js/dist/elementor.js:155
 #: js/dist/externals-components.js:11 js/dist/externals-components.js:63
 #: js/dist/externals-components.js:81 js/dist/externals-components.js:83
 #: js/dist/externals-components.js:85 js/dist/externals-components.js:87
@@ -2300,8 +2178,8 @@ msgstr "Titre parent"
 msgid "Date"
 msgstr "Date"
 
-#: inc/class-wpseo-admin-bar-menu.php:588 js/dist/block-editor.js:414
-#: js/dist/classic-editor.js:410 js/dist/elementor.js:414
+#: inc/class-wpseo-admin-bar-menu.php:588 js/dist/block-editor.js:204
+#: js/dist/classic-editor.js:200 js/dist/elementor.js:204
 msgid "Get Yoast SEO Premium"
 msgstr "Obtenez Yoast SEO Premium"
 
@@ -2433,8 +2311,8 @@ msgstr "Données de %s importées."
 msgid "%s data not found."
 msgstr "%s données introuvables."
 
-#: admin/class-premium-upsell-admin-block.php:58 js/dist/block-editor.js:361
-#: js/dist/classic-editor.js:357 js/dist/elementor.js:361
+#: admin/class-premium-upsell-admin-block.php:58 js/dist/block-editor.js:151
+#: js/dist/classic-editor.js:147 js/dist/elementor.js:151
 #: js/dist/externals-components.js:7 js/dist/externals-components.js:59
 #: js/dist/new-settings.js:254
 msgid "24/7 email support"
@@ -2516,8 +2394,8 @@ msgstr "Réglages par défaut pour %2$s, actuellement : %1$s"
 
 #. translators: %s expands to the post type name.
 #. Translators: %s translates to the Post Label in singular form
-#: admin/metabox/class-metabox.php:173 js/dist/block-editor.js:391
-#: js/dist/classic-editor.js:387 js/dist/elementor.js:391
+#: admin/metabox/class-metabox.php:173 js/dist/block-editor.js:181
+#: js/dist/classic-editor.js:177 js/dist/elementor.js:181
 msgid "Allow search engines to show this %s in search results?"
 msgstr "Autoriser les moteurs de recherche à afficher le contenu %s dans les résultats de recherche ?"
 
@@ -2589,7 +2467,7 @@ msgid "SEO analysis"
 msgstr "Analyse SEO"
 
 #: admin/formatter/class-metabox-formatter.php:236
-#: js/dist/editor-modules.js:319 js/dist/externals-components.js:11
+#: js/dist/editor-modules.js:109 js/dist/externals-components.js:11
 #: js/dist/externals/analysisReport.js:35
 msgid "Good results"
 msgstr "Déjà optimisé"
@@ -2622,13 +2500,13 @@ msgid "Highlight this result in the text"
 msgstr "Surligner ce résultat dans le texte"
 
 #: admin/formatter/class-metabox-formatter.php:235
-#: js/dist/editor-modules.js:319 js/dist/externals-components.js:11
+#: js/dist/editor-modules.js:109 js/dist/externals-components.js:11
 #: js/dist/externals/analysisReport.js:35
 msgid "Considerations"
 msgstr "Considérations"
 
 #: admin/formatter/class-metabox-formatter.php:232
-#: js/dist/editor-modules.js:319 js/dist/externals-components.js:11
+#: js/dist/editor-modules.js:109 js/dist/externals-components.js:11
 #: js/dist/externals/analysisReport.js:35
 msgid "Errors"
 msgstr "Erreurs"
@@ -2697,7 +2575,7 @@ msgstr "Marquez les contenus les plus importants des %1$s comme « contenus Cor
 #: admin/watchers/class-slug-change-watcher.php:224
 #: src/integrations/admin/workouts-integration.php:210
 #: src/integrations/admin/workouts-integration.php:239
-#: src/presenters/admin/help-link-presenter.php:75 js/dist/block-editor.js:456
+#: src/presenters/admin/help-link-presenter.php:75 js/dist/block-editor.js:250
 #: js/dist/externals/componentsNew.js:136 js/dist/externals/helpers.js:18
 #: js/dist/integrations-page.js:3 js/dist/integrations-page.js:19
 #: js/dist/integrations-page.js:27
@@ -2749,16 +2627,6 @@ msgstr "Tous les scores de lisibilité"
 msgid "Filter by Readability Score"
 msgstr "Filtrer par score de lisibilité"
 
-#. translators: %1$s expands to the product name. %2$s expands to a link to My
-#. Yoast
-#: inc/class-addon-manager.php:469
-msgid "You are not receiving updates or support! Fix this problem by adding this site and enabling %1$s for it in %2$s."
-msgstr "Vous ne recevez ni mises à jour, ni support ! Réglez ce problème en ajoutant ce site et activez %1$s pour ce domaine dans %2$s."
-
-#: src/integrations/admin/unsupported-php-version.php:163
-msgid "Remind me again in 4 weeks."
-msgstr "Me le rappeler dans 4 semaines."
-
 #. translators: %1$s expands to the request method
 #: admin/class-remote-request.php:95
 msgid "Request method %1$s is not valid."
@@ -2794,8 +2662,8 @@ msgstr "Score de lisibilité"
 msgid "Cornerstone content"
 msgstr "Contenu Cornestone"
 
-#: admin/class-premium-upsell-admin-block.php:56 js/dist/block-editor.js:359
-#: js/dist/classic-editor.js:355 js/dist/elementor.js:359
+#: admin/class-premium-upsell-admin-block.php:56 js/dist/block-editor.js:149
+#: js/dist/classic-editor.js:145 js/dist/elementor.js:149
 #: js/dist/externals-components.js:5 js/dist/externals-components.js:57
 #: js/dist/new-settings.js:254
 msgid "Superfast internal linking suggestions"
@@ -2806,8 +2674,8 @@ msgstr "Suggestions de liens internes super-rapides"
 msgid "Save changes"
 msgstr "Enregistrer les modifications"
 
-#: admin/class-premium-popup.php:88 js/dist/block-editor.js:365
-#: js/dist/classic-editor.js:361 js/dist/elementor.js:365
+#: admin/class-premium-popup.php:88 js/dist/block-editor.js:155
+#: js/dist/classic-editor.js:151 js/dist/elementor.js:155
 #: js/dist/externals-components.js:11 js/dist/externals-components.js:63
 msgid "1 year free support and updates included!"
 msgstr "1 an de mises à jour et de support offert !"
@@ -2819,8 +2687,8 @@ msgstr "1 an de mises à jour et de support offert !"
 msgid "The plugin %2$s changes your site's output and in doing that differentiates between search engines and normal users, a process that's called cloaking. We highly recommend that you disable it."
 msgstr "L’extension %2$s modifie l’apparence de votre site et, ce faisant, elle diffère entre les moteurs de recherche et les utilisateurs normaux, c’est un processus qui se nomme cloaking. Nous vous recommandons vivement de la désactiver."
 
-#: admin/class-premium-upsell-admin-block.php:59 js/dist/block-editor.js:361
-#: js/dist/classic-editor.js:357 js/dist/elementor.js:361
+#: admin/class-premium-upsell-admin-block.php:59 js/dist/block-editor.js:151
+#: js/dist/classic-editor.js:147 js/dist/elementor.js:151
 #: js/dist/externals-components.js:7 js/dist/externals-components.js:59
 #: js/dist/new-settings.js:254
 msgid "No ads!"
@@ -2934,7 +2802,7 @@ msgstr "Accédez à notre équipe de support 24/7"
 #: admin/metabox/class-metabox.php:169 js/dist/externals/analysis.js:221
 #: js/dist/externals/analysis.js:275 js/dist/externals/analysis.js:393
 #: js/dist/externals/replacementVariableEditor.js:78
-#: js/dist/externals/searchMetadataPreviews.js:259 js/dist/new-settings.js:9
+#: js/dist/externals/searchMetadataPreviews.js:270 js/dist/new-settings.js:9
 #: js/dist/new-settings.js:11 js/dist/new-settings.js:14
 #: js/dist/new-settings.js:18 js/dist/new-settings.js:51
 #: js/dist/new-settings.js:62 js/dist/new-settings.js:86
@@ -2997,14 +2865,14 @@ msgid "Dash"
 msgstr "Tiret"
 
 #: admin/metabox/class-metabox.php:180 admin/metabox/class-metabox.php:185
-#: js/dist/block-editor.js:385 js/dist/classic-editor.js:381
-#: js/dist/elementor.js:385
+#: js/dist/block-editor.js:175 js/dist/classic-editor.js:171
+#: js/dist/elementor.js:175
 msgid "No"
 msgstr "Non"
 
 #: admin/metabox/class-metabox.php:179 admin/metabox/class-metabox.php:184
-#: js/dist/block-editor.js:385 js/dist/classic-editor.js:381
-#: js/dist/elementor.js:385 js/dist/externals/schemaBlocks.js:13
+#: js/dist/block-editor.js:175 js/dist/classic-editor.js:171
+#: js/dist/elementor.js:175
 msgid "Yes"
 msgstr "Oui"
 
@@ -3103,10 +2971,9 @@ msgstr "Analyse de lisibilité"
 #: admin/statistics/class-statistics-service.php:217
 #: inc/class-wpseo-rank.php:140 inc/class-wpseo-rank.php:163
 #: inc/class-wpseo-rank.php:195 js/dist/block-editor.js:1
-#: js/dist/block-editor.js:456 js/dist/editor-modules.js:1
-#: js/dist/externals-components.js:109 js/dist/externals/analysis.js:393
-#: js/dist/frontend-inspector-resources.js:1 js/dist/post-edit.js:1
-#: js/dist/term-edit.js:1
+#: js/dist/editor-modules.js:1 js/dist/externals-components.js:109
+#: js/dist/externals/analysis.js:393 js/dist/frontend-inspector-resources.js:1
+#: js/dist/post-edit.js:1 js/dist/term-edit.js:1
 msgid "Needs improvement"
 msgstr "À améliorer"
 
@@ -3117,7 +2984,7 @@ msgid "Readability"
 msgstr "Lisibilité"
 
 #: admin/formatter/class-metabox-formatter.php:234
-#: js/dist/editor-modules.js:319 js/dist/externals-components.js:11
+#: js/dist/editor-modules.js:109 js/dist/externals-components.js:11
 #: js/dist/externals/analysisReport.js:35
 msgid "Improvements"
 msgstr "Améliorations"
@@ -3132,13 +2999,12 @@ msgstr "Nous avons détecté les problèmes suivants qui affectent le référenc
 
 #: admin/formatter/class-metabox-formatter.php:233
 #: admin/views/partial-notifications-errors.php:20
-#: js/dist/editor-modules.js:319 js/dist/externals-components.js:11
+#: js/dist/editor-modules.js:109 js/dist/externals-components.js:11
 #: js/dist/externals/analysisReport.js:35
 msgid "Problems"
 msgstr "Problèmes"
 
 #: admin/formatter/class-metabox-formatter.php:203
-#: js/dist/externals/schemaBlocks.js:9
 msgid "Analysis"
 msgstr "Analyse"
 
@@ -3274,7 +3140,7 @@ msgstr "La première solution SEO tout-en-un pour WordPress, y compris l’analy
 
 #. Plugin Name of the plugin
 #: admin/capabilities/class-capability-manager-integration.php:72
-#: src/presenters/meta-description-presenter.php:36 js/dist/block-editor.js:456
+#: src/presenters/meta-description-presenter.php:36 js/dist/block-editor.js:250
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
@@ -3329,7 +3195,7 @@ msgid "%1$s does not seem to be a valid %2$s verification string. Please correct
 msgstr "%1$s ne semble pas être une chaine de caractères de vérification valide pour %2$s. Veuillez corriger."
 
 #. translators: %s expands to the name of a post type (plural).
-#: inc/class-upgrade.php:1345 inc/options/class-wpseo-option-titles.php:284
+#: inc/class-upgrade.php:1355 inc/options/class-wpseo-option-titles.php:284
 msgid "%s Archive"
 msgstr "%s Archive"
 
@@ -3403,10 +3269,9 @@ msgstr "Erreur 404 : Page introuvable"
 #: admin/statistics/class-statistics-service.php:227
 #: inc/class-wpseo-rank.php:142 inc/class-wpseo-rank.php:173
 #: inc/class-wpseo-rank.php:205 js/dist/block-editor.js:1
-#: js/dist/block-editor.js:456 js/dist/editor-modules.js:1
-#: js/dist/externals-components.js:109 js/dist/externals/analysis.js:393
-#: js/dist/frontend-inspector-resources.js:1 js/dist/post-edit.js:1
-#: js/dist/term-edit.js:1
+#: js/dist/editor-modules.js:1 js/dist/externals-components.js:109
+#: js/dist/externals/analysis.js:393 js/dist/frontend-inspector-resources.js:1
+#: js/dist/post-edit.js:1 js/dist/term-edit.js:1
 msgid "Good"
 msgstr "Bon"
 
@@ -3571,7 +3436,7 @@ msgstr "Page non trouvée"
 
 #. translators: %s expands to the variable used for term title.
 #: admin/formatter/class-term-metabox-formatter.php:162
-#: inc/class-upgrade.php:1348 inc/options/class-wpseo-option-titles.php:320
+#: inc/class-upgrade.php:1358 inc/options/class-wpseo-option-titles.php:320
 msgid "%s Archives"
 msgstr "Archives des %s"
 
@@ -3907,8 +3772,8 @@ msgstr "Redirection 301"
 msgid "The canonical URL that this page should point to. Leave empty to default to permalink. %1$sCross domain canonical%2$s supported too."
 msgstr "L’URL canonique vers laquelle cette page devrait pointer. Laissez ce champ vide pour utiliser le slug par défaut. Les %1$sURL canoniques vers d’autres domaines%2$s sont aussi prises en charge."
 
-#: admin/metabox/class-metabox.php:196 js/dist/block-editor.js:393
-#: js/dist/classic-editor.js:389 js/dist/elementor.js:393
+#: admin/metabox/class-metabox.php:196 js/dist/block-editor.js:183
+#: js/dist/classic-editor.js:179 js/dist/elementor.js:183
 msgid "Canonical URL"
 msgstr "URL canonique"
 
@@ -3916,23 +3781,23 @@ msgstr "URL canonique"
 msgid "Title to use for this page in breadcrumb paths"
 msgstr "Titre à utiliser pour cette page dans le fil d’Ariane"
 
-#: admin/metabox/class-metabox.php:193 js/dist/block-editor.js:393
-#: js/dist/classic-editor.js:389 js/dist/elementor.js:393
+#: admin/metabox/class-metabox.php:193 js/dist/block-editor.js:183
+#: js/dist/classic-editor.js:179 js/dist/elementor.js:183
 msgid "Breadcrumbs Title"
 msgstr "Titre pour le fil d’Ariane"
 
-#: admin/metabox/class-metabox.php:191 js/dist/block-editor.js:393
-#: js/dist/classic-editor.js:389 js/dist/elementor.js:393
+#: admin/metabox/class-metabox.php:191 js/dist/block-editor.js:183
+#: js/dist/classic-editor.js:179 js/dist/elementor.js:183
 msgid "No Snippet"
 msgstr "Pas de métadonnées"
 
-#: admin/metabox/class-metabox.php:190 js/dist/block-editor.js:393
-#: js/dist/classic-editor.js:389 js/dist/elementor.js:393
+#: admin/metabox/class-metabox.php:190 js/dist/block-editor.js:183
+#: js/dist/classic-editor.js:179 js/dist/elementor.js:183
 msgid "No Archive"
 msgstr "Aucune archive"
 
-#: admin/metabox/class-metabox.php:189 js/dist/block-editor.js:393
-#: js/dist/classic-editor.js:389 js/dist/elementor.js:393
+#: admin/metabox/class-metabox.php:189 js/dist/block-editor.js:183
+#: js/dist/classic-editor.js:179 js/dist/elementor.js:183
 msgid "No Image Index"
 msgstr "Pas d’index pour l’image"
 
@@ -3941,8 +3806,8 @@ msgstr "Pas d’index pour l’image"
 msgid "None"
 msgstr "Aucun"
 
-#: admin/metabox/class-metabox.php:187 js/dist/block-editor.js:393
-#: js/dist/classic-editor.js:389 js/dist/elementor.js:393
+#: admin/metabox/class-metabox.php:187 js/dist/block-editor.js:183
+#: js/dist/classic-editor.js:179 js/dist/elementor.js:183
 msgid "Meta robots advanced"
 msgstr "Méta robots avancés"
 
@@ -3952,7 +3817,7 @@ msgstr "Avertissement : même si vous pouvez modifier les méta « robots » 
 
 #: admin/metabox/class-metabox.php:170 js/dist/externals/analysis.js:393
 #: js/dist/externals/replacementVariableEditor.js:78
-#: js/dist/externals/searchMetadataPreviews.js:259 js/dist/new-settings.js:9
+#: js/dist/externals/searchMetadataPreviews.js:270 js/dist/new-settings.js:9
 #: js/dist/new-settings.js:11 js/dist/new-settings.js:14
 #: js/dist/new-settings.js:18 js/dist/new-settings.js:51
 #: js/dist/new-settings.js:62 js/dist/new-settings.js:86
@@ -4033,10 +3898,10 @@ msgstr "État de la publication"
 msgid "WP Page Title"
 msgstr "Titre de la page"
 
-#: admin/class-bulk-editor-list-table.php:836 js/dist/block-editor.js:303
-#: js/dist/classic-editor.js:299 js/dist/dashboard-widget.js:20
-#: js/dist/dashboard-widget.js:26 js/dist/editor-modules.js:261
-#: js/dist/elementor.js:303
+#: admin/class-bulk-editor-list-table.php:836 js/dist/block-editor.js:93
+#: js/dist/classic-editor.js:89 js/dist/dashboard-widget.js:20
+#: js/dist/dashboard-widget.js:26 js/dist/editor-modules.js:51
+#: js/dist/elementor.js:93
 msgid "View"
 msgstr "Voir"
 
@@ -4056,7 +3921,7 @@ msgstr "Prévisualiser &#8220;%s&#8221;"
 
 #: admin/class-bulk-editor-list-table.php:814
 #: js/dist/first-time-configuration.js:14
-#: js/dist/first-time-configuration.js:226 js/dist/installation-success.js:13
+#: js/dist/first-time-configuration.js:16 js/dist/installation-success.js:13
 msgid "Edit"
 msgstr "Modifier"
 
