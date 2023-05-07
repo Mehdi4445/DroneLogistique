@@ -1199,7 +1199,7 @@ $(document).on('click','.wp-chatbot-lng-item-remove',function () {
                 $.ajax({
                     url:  ajax_object.ajax_url,
                     type:'POST',
-                    data:    ({action  : 'openai_settings_option',nonce: ajax_object.ajax_nonce,file_id:file_id}),
+                    data:    ({action  : '',nonce: ajax_object.ajax_nonce,file_id:file_id}),
                     success: function(data){
                         $('#result').html(data);
                         location.reload();

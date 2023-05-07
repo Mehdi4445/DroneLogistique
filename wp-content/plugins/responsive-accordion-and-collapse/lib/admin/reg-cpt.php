@@ -3,7 +3,7 @@
 			$labels = array(
 				'name'                => _x( 'Responsive Accordion', 'Responsive Accordion', wpshopmart_accordion_text_domain ),
 				'singular_name'       => _x( 'Responsive Accordion', 'Responsive Accordion', wpshopmart_accordion_text_domain ),
-				'menu_name'           => __( 'Responsive Accordion', wpshopmart_accordion_text_domain ),
+				'menu_name'           => __( 'Accordion | FAQ', wpshopmart_accordion_text_domain ),
 				'parent_item_colon'   => __( 'Parent Item:', wpshopmart_accordion_text_domain ),
 				'all_items'           => __( 'All Accordion', wpshopmart_accordion_text_domain ),
 				'view_item'           => __( 'View Accordion', wpshopmart_accordion_text_domain ),

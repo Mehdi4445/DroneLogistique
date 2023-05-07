@@ -48,7 +48,7 @@
             $( '.searchwp-admin-menu-notification-indicator' ).parent()
                 .on( 'click', showNotificationsPanelOnHash );
 
-            $( '.searchwp-branding-bar__actions-button' )
+            $( '#swp-notifications-page-header-button' )
                 .on( 'click', () => $notificationsPanel.show() );
 
             $( '.searchwp-notifications-panel__close' )

@@ -5,7 +5,7 @@ Tags: appointment, appointments, Booking, calendar, plugin, reservation, reserva
 Requires at least: 3.7
 Tested up to: 6.2
 Requires PHP: 5.3
-Stable tag: 3.11.8
+Stable tag: 3.11.9
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -213,8 +213,11 @@ Note: you can have only one calendar on one page.
 
 == Changelog ==
 
+= 3.11.9 (2023-05-03) =
+* Added new param for FullCalendar to hide cancelled events from being displayed in calendar (`hide_cancelled="0 or 1"` default `0`)
+
 = 3.11.8 (2023-17-03) =
-* Fixed issue with custom form fields that could not be deleted or editeds
+* Fixed issue with custom form fields that could not be deleted or edited
 
 = 3.11.7 (2023-03-03) =
 * Fixed issue with custom redirect settings on booking

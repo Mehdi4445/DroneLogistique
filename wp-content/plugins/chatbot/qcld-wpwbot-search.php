@@ -153,14 +153,14 @@ function qc_wpbo_search_response(){
 	if(empty($response_result)){
 
 		$fields = get_option('qc_bot_str_fields');
-		if($fields && !empty($fields) && class_exists('Qcld_str_pro')){
+		if($fields && !empty($fields)){
 			$qfields = implode(', ', $fields);
 		}else{
 			$qfields = '`query`,`keyword`,`response`';
 		}
 		$sql = "ALTER TABLE `{$table}` ADD FULLTEXT($qfields);";
 		$wpdb->query( $sql );
-		$sql_text = "SELECT `query`, `response`, MATCH($qfields) AGAINST('".$keyword."' IN NATURAL LANGUAGE MODE) as score FROM `$table` WHERE MATCH($qfields) AGAINST('".$keyword."' IN NATURAL LANGUAGE MODE) order by score desc limit 15";
+		$sql_text = "SELECT  MATCH($qfields) AGAINST('".$keyword."' IN NATURAL LANGUAGE MODE) as score FROM `$table` WHERE MATCH($qfields) AGAINST('".$keyword."' IN NATURAL LANGUAGE MODE) order by score desc limit 15";
 		$results = $wpdb->get_results($sql_text);
 		$weight = get_option('qc_bot_str_weight')!=''?get_option('qc_bot_str_weight'):'0.4';
 		//$weight = 0;
@@ -191,7 +191,9 @@ function qc_wpbo_search_response(){
 		}
 
 	}
-	
+	if(empty($result->query)){
+		$status = array('status'=>'fail', 'multiple'=>false, 'data'=>$response_result);
+	}
 	echo json_encode($status);
 
 	die();

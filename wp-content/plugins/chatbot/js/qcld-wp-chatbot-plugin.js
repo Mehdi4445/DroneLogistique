@@ -1617,7 +1617,11 @@ var wpwKits;
             
                             var json=$.parseJSON(response);
                             if(json.status=='fail' && json.data !==''){
-                                wpwTree.openai_reply(msg)
+                                if((globalwpw.settings.obj.openai_enabled == 1) || (wp_chatbot_obj.openai_enabled == 1)){
+                                    wpwTree.openai_reply(msg)
+                                }else{
+                                    wpwMsg.single(globalwpw.settings.obj.empty_filter_msg);
+                                }
 
                             }else if(json.status=='success'){
                                 if(typeof(json.category)!=="undefined" && json.category){

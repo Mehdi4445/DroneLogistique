@@ -60,16 +60,19 @@
 		<h1 style="color:#000;font-size:24px;font-weight:500;line-height:1.4"><?php esc_html_e('Accordion documentation',wpshopmart_accordion_text_domain); ?></h1>				
 	</div>	
 
-	<div class="row">
-		<div class="row col-md-12" style="margin-bottom: 30px;">
-			<div class="col-md-4">	<img width="100" height="20" style="width:310px;height:auto; margin-top: 20px;" src="<?php echo esc_url(wpshopmart_accordion_directory_url.'img/wpshopmart-logo.png'); ?>" > </div>
-			<div class="col-md-8"><a class="btn btn-danger btn-lg " href="https://www.youtube.com/c/wpshopmart?sub_confirmation=1" target="_blank"><?php esc_html_e('Subscribe Our Channel',wpshopmart_accordion_text_domain); ?></a>
-			<a class="btn btn-success btn-lg " href="https://www.youtube.com/c/wpshopmart" target="_blank"><?php esc_html_e('Check More Helping Videos',wpshopmart_accordion_text_domain); ?></a></div>
-		</div>	
-	</div>							
+				<div class="row">			
 	</br></br>
 	<div class="col-md-12" >	
 	<iframe width="600" height="370" src="https://www.youtube.com/embed/iu2Wj7qZo_g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
+	</div>
+	<div class="row">
+		<div class="row col-md-12" style="margin-bottom: 30px;">
+			<div class="col-md-4">	<img width="100" height="20" style="width:310px;height:auto; margin-top: 20px;" src="<?php echo esc_url(wpshopmart_accordion_directory_url.'img/wpshopmart-logo.png'); ?>" > </div>
+			</br></br>
+			<div class="col-md-12"><a class="btn btn-danger btn-lg " href="https://www.youtube.com/c/wpshopmart?sub_confirmation=1" target="_blank"><?php esc_html_e('Subscribe Our Channel',wpshopmart_accordion_text_domain); ?></a>
+			<a class="btn btn-success btn-lg " href="https://www.youtube.com/c/wpshopmart" target="_blank"><?php esc_html_e('Check More Helping Videos',wpshopmart_accordion_text_domain); ?></a></div>
+		</div>	
+	</div>	
 </div>
 						

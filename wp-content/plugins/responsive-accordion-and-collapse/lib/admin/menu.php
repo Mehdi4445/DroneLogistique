@@ -96,7 +96,7 @@ class wpsm_accordion {
 		add_meta_box ('accordion_shortcode', __('Accordion Shortcode', wpshopmart_accordion_text_domain), array(&$this, 'wpsm_pic_ac_shortcode'), 'responsive_accordion', 'normal', 'low');
 		add_meta_box ('wpsm_pic_ac_help', __('Support & Docs', wpshopmart_accordion_text_domain), array(&$this, 'wpsm_pic_ac_help'), 'responsive_accordion', 'normal', 'low');
 		
-		add_meta_box('accordion_follow', __('BLACK FRIDAY DEAL', wpshopmart_accordion_text_domain), array(&$this, 'wpsm_accordion_follow_meta_box_function'), 'responsive_accordion', 'side', 'low');
+		add_meta_box('accordion_follow', __('Shortcode', wpshopmart_accordion_text_domain), array(&$this, 'wpsm_accordion_follow_meta_box_function'), 'responsive_accordion', 'side', 'low');
 		
 		add_meta_box('accordion_rateus', __('Rate Us If You Like This Plugin', wpshopmart_accordion_text_domain), array(&$this, 'wpsm_accordion_rateus_meta_box_function'), 'responsive_accordion', 'side', 'low');
 		add_meta_box('accordion_setting', __('Accordion Settings', wpshopmart_accordion_text_domain), array(&$this, 'wpsm_add_ac_setting_meta_box_function'), 'responsive_accordion', 'side', 'low');
@@ -176,19 +176,13 @@ class wpsm_accordion {
 		?>
 		<style>
 		
-		#accordion_follow{
-			background-color: #7242e7;
-			   text-align:center;
-			}
-			#accordion_follow .hndle , #accordion_follow .handlediv{
-			display:none;
-			}
+		
 			#accordion_follow h1{
 			color:#fff;
 			
 			}
 			 #accordion_follow h3 {
-			color:#fff;
+			color:#000;
 			font-size:15px;
 			}
 			#accordion_follow .button-hero{
@@ -224,7 +218,10 @@ class wpsm_accordion {
 				display:none;
 			}
 		</style>
+		 <h3><?php esc_html_e('copy below shortcode and paste into the page or post to display accordion',wpshopmart_accordion_text_domain); ?></h3>
 		<br />
+		<input readonly="readonly" style="width:100%;padding:10px;margin-bottom:10px" type="text" onclick="this.select()" value="<?php echo esc_attr("[WPSM_AC id=".get_the_ID()."]"); ?>">
+		
 		<a href="http://demo.wpshopmart.com/responsive-accordion-and-collapse/" target="_blank" class="button button-primary button-hero "><?php esc_html_e('View Demo For Help',wpshopmart_accordion_text_domain); ?></a>
 			
 		<?php
@@ -272,15 +269,17 @@ class wpsm_accordion {
     box-shadow: none;
     text-shadow: none;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 17px;
     border: 1px solid #efda4a;
+	white-space: break-spaces;
+	margin-top:20px;
 				
 			}
 		</style>
-		   <h1><?php esc_html_e('Follow Us On',wpshopmart_accordion_text_domain); ?></h1>
-		   <h3><?php esc_html_e('Youtube To Grab Free Web design Course & WordPress Help/Tips',wpshopmart_accordion_text_domain); ?></h3>
-			<a href="https://www.youtube.com/c/wpshopmart" target="_blank"><img style="width:200px;height:auto" src="<?php echo esc_url(wpshopmart_accordion_directory_url.'img/youtube.png'); ?>" /></a>
-			<a href="https://www.youtube.com/c/wpshopmart?sub_confirmation=1" target="_blank" class="button button-primary button-hero "><?php esc_html_e('Subscribe Us Now',wpshopmart_accordion_text_domain); ?></a>
+		   <h1><?php esc_html_e('Need Help',wpshopmart_accordion_text_domain); ?></h1>
+		 </h3>
+		
+			<a href="https://wordpress.org/support/plugin/responsive-accordion-and-collapse/" target="_blank" class="button button-primary button-hero "><?php esc_html_e('Create Support Here',wpshopmart_accordion_text_domain); ?></a>
 			
 		<?php 
 	}
