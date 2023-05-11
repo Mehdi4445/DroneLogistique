@@ -6,8 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* Here you can insert your functions, filters and actions. */
 
-
-
+/** custom comment section */
+add_filter( 'comment_form_logged_in', 'unset_login_field' );
+function unset_login_field($fields){
+    unset($fields);
+}
 
 
 
