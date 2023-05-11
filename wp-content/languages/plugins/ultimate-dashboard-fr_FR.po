@@ -1,0 +1,1115 @@
+# Translation of Plugins - Ultimate Dashboard &#8211; Custom WordPress Dashboard - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - Ultimate Dashboard &#8211; Custom WordPress Dashboard - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-02 10:44:49+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - Ultimate Dashboard &#8211; Custom WordPress Dashboard - Stable (latest release)\n"
+
+#: modules/tool/inc/process-import.php:74
+msgid "Your import file is empty"
+msgstr "Votre fichier d’importation est vide"
+
+#: modules/widget/ajax/change-active-status.php:22
+msgid "Page/post not found"
+msgstr "Page/publication introuvable"
+
+#: modules/widget/ajax/change-active-status.php:29
+msgid "Page/post has been activated."
+msgstr "La page/publication a été activée."
+
+#: modules/widget/ajax/change-active-status.php:37
+msgid "Page/post has been de-activated."
+msgstr "La page/publication a été désactivée."
+
+#: modules/tool/templates/tools-template.php:62
+msgid "Import File"
+msgstr "Importer un fichier"
+
+#: modules/tool/templates/tools-template.php:52
+msgid "Export File"
+msgstr "Exporter un fichier"
+
+#: modules/admin-bar/templates/menu-list.php:58
+#: modules/admin-menu/templates/menu-list.php:56
+msgid "Menu Title"
+msgstr "Titre du menu"
+
+#: modules/admin-bar/templates/submenu-list.php:55
+#: modules/admin-menu/templates/submenu-list.php:36
+msgid "Submenu Title"
+msgstr "Titre du sous-menu"
+
+#: modules/admin-menu/class-admin-menu-module.php:93
+#: modules/admin-menu/templates/template.php:82
+#: modules/feature/templates/feature-template.php:42
+#: modules/plugin-onboarding/templates/plugin-onboarding-template.php:36
+msgid "Admin Menu Editor"
+msgstr "Éditeur du menu d’administration"
+
+#: modules/admin-menu/templates/menu-list.php:112
+msgid "Paste a base64-encoded SVG using a data URI, which will be colored to match the color scheme. This should begin with 'data:image/svg+xml;base64,'. Or you can use this tool to generate it: https://dopiaza.org/tools/datauri/index.php"
+msgstr "Collez un SVG codé en base64 avec une URL de données, qui sera coloré pour correspondre au jeu de couleurs. Cela doit commencer par « data:image/svg+xml;base64 ». Ou vous pouvez utiliser cet outil pour le générer : https://dopiaza.org/tools/datauri/index.php"
+
+#: modules/setting/class-setting-module.php:152
+msgid "Remove Font Awesome"
+msgstr "Retirer Font Awesome"
+
+#: modules/widget/templates/metaboxes/pro-link.php:15
+msgid "Contact Form Widgets"
+msgstr "Widgets de formulaire de contact"
+
+#: modules/setting/class-setting-module.php:149
+msgid "Use only if your icons are not displayed correctly."
+msgstr "À utiliser uniquement si vos icônes ne s’affichent pas correctement."
+
+#: modules/widget/templates/metaboxes/pro-link.php:16
+msgid "Restrict Widgets to specific Users or User Roles"
+msgstr "Restreindre les widgets à des utilisateurs ou à des rôles utilisateur spécifiques"
+
+#: modules/admin-page/templates/metaboxes/display.php:44
+msgid "Remove the admin notices (if any) from the Custom Admin Page."
+msgstr "Retirez les notifications d’administration (le cas échéant) de la page d’administration personnalisée."
+
+#: modules/admin-page/templates/metaboxes/display.php:34
+msgid "Remove the default margins from the Custom Admin Page."
+msgstr "Retirez les marges par défaut de la page d’administration personnalisée."
+
+#: modules/admin-page/templates/metaboxes/display.php:24
+msgid "Remove the page title from the Custom Admin Page."
+msgstr "Retirez le titre de la page de la page d’administration personnalisée."
+
+#: modules/admin-bar/ajax/class-get-users.php:29
+#: modules/admin-menu/ajax/class-get-menu.php:58
+#: modules/admin-menu/ajax/class-get-users.php:25
+#: modules/admin-page/ajax/change-active-status.php:18
+#: modules/plugin-onboarding/ajax/class-save-modules.php:64
+#: modules/plugin-onboarding/ajax/class-skip-discount.php:50
+#: modules/plugin-onboarding/ajax/class-subscribe.php:64
+#: modules/widget/ajax/change-active-status.php:18
+msgid "Invalid token"
+msgstr "Jeton non valide"
+
+#: modules/admin-bar/templates/menu-list.php:48
+#: modules/admin-bar/templates/submenu-list.php:45
+#: modules/admin-menu/templates/menu-list.php:46
+#: modules/admin-page/templates/metaboxes/menu.php:29
+msgid "Submenu"
+msgstr "Sous-menu"
+
+#: modules/admin-bar/templates/menu-list.php:134
+#: modules/admin-menu/templates/menu-list.php:89
+#: modules/admin-page/class-admin-page-module.php:136
+#: modules/admin-page/templates/icon-selector.php:27
+msgid "Menu Icon"
+msgstr "Icône du menu"
+
+#: modules/admin-page/ajax/change-active-status.php:22
+msgid "Post not found"
+msgstr "Publication non trouvée"
+
+#: modules/admin-page/ajax/change-active-status.php:29
+msgid "page has been activated."
+msgstr "la page a été activée."
+
+#: modules/admin-page/ajax/change-active-status.php:37
+msgid "page has been de-activated."
+msgstr "la page a été désactivée."
+
+#: modules/admin-page/class-admin-page-module.php:105
+#: modules/admin-page/class-admin-page-module.php:108
+msgid "Admin Page updated."
+msgstr "Page d’administration mise à jour."
+
+#. translators: %s: Date and time of the revision.
+#: modules/admin-page/class-admin-page-module.php:111
+msgid "Admin Page published."
+msgstr "Page d’administration publiée."
+
+#: modules/admin-page/class-admin-page-module.php:112
+msgid "Admin Page saved."
+msgstr "Page d’administration enregistrée."
+
+#: modules/admin-page/class-admin-page-module.php:113
+msgid "Admin Page submitted."
+msgstr "Page d’administration envoyée."
+
+#: modules/admin-page/class-admin-page-module.php:135
+msgid "Page Name"
+msgstr "Nom de la page"
+
+#: modules/admin-page/class-admin-page-module.php:137
+#: modules/admin-page/class-admin-page-module.php:252
+msgid "Content Type"
+msgstr "Type de contenu"
+
+#: modules/admin-page/class-admin-page-module.php:138
+#: modules/admin-page/templates/metaboxes/menu.php:35
+msgid "Parent Menu"
+msgstr "Menu parent"
+
+#: modules/admin-page/class-admin-page-module.php:140
+#: modules/admin-page/class-admin-page-module.php:251
+#: modules/feature/templates/feature-template.php:106
+#: modules/feature/templates/feature-template.php:107
+#: modules/widget/class-widget-module.php:116
+#: modules/widget/class-widget-module.php:192
+msgid "Active"
+msgstr "Actif"
+
+#: modules/admin-page/class-admin-page-module.php:255
+#: modules/widget/class-widget-module.php:195
+msgid "PRO Features Available"
+msgstr "Fonctionnalités PRO disponibles"
+
+#: modules/admin-page/class-admin-page-module.php:261
+msgid "Display Options"
+msgstr "Options d’affichage"
+
+#: modules/admin-page/inc/column-content.php:40
+#: modules/admin-page/inc/column-content.php:88
+msgid "None"
+msgstr "Aucun"
+
+#: modules/admin-page/inc/column-content.php:64
+msgid "Editor"
+msgstr "Éditeur"
+
+#: modules/admin-page/inc/column-content.php:64
+msgid "Builder"
+msgstr "Constructeur"
+
+#. translators: %1$s: is the text prefix, %2$s: is the editor or builder name,
+#. %3$s: is the text suffix.
+#: modules/admin-page/inc/column-content.php:68
+msgid "%1$s %2$s %3$s"
+msgstr "%1$s %2$s %3$s"
+
+#: modules/admin-page/inc/post-type.php:18
+msgid "Add Admin Page"
+msgstr "Ajouter une page d’administration"
+
+#: modules/admin-page/inc/post-type.php:19
+msgid "New Admin Page"
+msgstr "Nouvelle page d’administration"
+
+#: modules/admin-page/inc/post-type.php:20
+msgid "Edit Admin Page"
+msgstr "Modifier la page d’administration"
+
+#: modules/admin-page/inc/post-type.php:21
+msgid "View Admin Page"
+msgstr "Voir la page d’administration"
+
+#: modules/admin-page/inc/post-type.php:23
+msgid "Search Admin Pages"
+msgstr "Rechercher des pages d’administration"
+
+#: modules/admin-page/inc/post-type.php:24
+msgid "No Admin Pages found."
+msgstr "Aucune page d’administration trouvée."
+
+#: modules/admin-page/templates/metaboxes/content-type.php:18
+msgid "Default Editor"
+msgstr "Éditeur par défaut"
+
+#: modules/admin-page/templates/metaboxes/content-type.php:19
+msgid "HTML Editor"
+msgstr "Éditeur HTML"
+
+#: modules/admin-page/templates/metaboxes/menu.php:23
+msgid "Menu Type"
+msgstr "Type de menu"
+
+#: modules/admin-page/templates/metaboxes/menu.php:26
+msgid "Top-level Menu"
+msgstr "Menu de niveau supérieur"
+
+#: modules/admin-page/templates/metaboxes/menu.php:48
+msgid "Menu Order"
+msgstr "Ordre du menu"
+
+#: modules/tool/inc/process-import.php:193
+msgid "Admin pages imported"
+msgstr "Pages d’administration importées"
+
+#: modules/admin-page/inc/post-type.php:15
+#: modules/admin-page/inc/post-type.php:17
+msgctxt "ultimate-dashboard"
+msgid "Admin Page"
+msgstr "Page d’administration"
+
+#: modules/admin-page/inc/post-type.php:14
+#: modules/admin-page/inc/post-type.php:16
+msgctxt "ultimate-dashboard"
+msgid "Admin Pages"
+msgstr "Pages d’administration"
+
+#: modules/admin-page/templates/metaboxes/advanced.php:15
+#: modules/login-customizer/inc/add-sections.php:103
+#: modules/login-customizer/sections/custom-css.php:31
+#: modules/setting/class-setting-module.php:116
+#: modules/setting/templates/settings-template.php:51
+msgid "Custom CSS"
+msgstr "CSS personnalisé"
+
+#: modules/admin-page/templates/metaboxes/display.php:41
+msgid "Remove Admin Notices"
+msgstr "Retirer les notifications d’administration"
+
+#: modules/admin-page/templates/metaboxes/display.php:31
+msgid "Remove Page Margin"
+msgstr "Retirer la marge de la page"
+
+#: modules/admin-page/templates/metaboxes/display.php:21
+msgid "Remove Page Title"
+msgstr "Retirer le titre de page"
+
+#: modules/admin-page/templates/metaboxes/pro-link.php:15
+msgid "Restrict Admin Pages to specific Users or User Roles"
+msgstr "Restreindre les pages d’administration à des utilisateurs ou à des rôles utilisateur spécifiques"
+
+#: modules/admin-page/class-admin-page-module.php:119
+msgid "Admin Page draft updated."
+msgstr "Brouillon de page d’administration mis à jour."
+
+#. translators: Publish box date format, see http://php.net/date for more info.
+#: modules/admin-page/class-admin-page-module.php:116
+msgid "Admin Page scheduled for: <strong>%1$s</strong>."
+msgstr "Page d’administration planifiée pour: <strong>%1$s</strong>."
+
+#. translators: %s: Date and time of the revision.
+#: modules/admin-page/class-admin-page-module.php:110
+msgid "Admin Page restored to revision from %s"
+msgstr "Page d’administration restaurée depuis la révision %s"
+
+#: modules/admin-page/class-admin-page-module.php:198
+#: modules/admin-page/inc/post-type.php:22
+#: modules/feature/templates/feature-template.php:36
+#: modules/plugin-onboarding/templates/plugin-onboarding-template.php:32
+#: modules/tool/templates/fields/export-field.php:55
+msgid "Admin Pages"
+msgstr "Pages d’administration"
+
+#: modules/admin-page/inc/post-type.php:25
+msgid "No Admin Pages in Trash."
+msgstr "Aucune page d’administration trouvée dans la corbeille."
+
+#: modules/admin-page/class-admin-page-module.php:139
+#: modules/widget/class-widget-module.php:115
+msgid "User Roles"
+msgstr "Rôles de l’utilisateur"
+
+#: modules/admin-page/class-admin-page-module.php:258
+msgid "Menu Attributes"
+msgstr "Attributs du menu"
+
+#: modules/login-customizer/sections/logo.php:97
+msgid "Available template tags: {home_url}"
+msgstr "Balises de modèle disponibles: {home_url}"
+
+#: modules/admin-page/class-admin-page-module.php:260
+#: modules/admin-page/inc/column-content.php:60
+#: modules/widget/inc/column-content.php:22
+#: modules/widget/templates/widget-types/html-widget.php:22
+msgid "HTML"
+msgstr "HTML"
+
+#: modules/branding/class-branding-module.php:155
+msgid "WordPress Admin Branding"
+msgstr "Marque de l’administration WordPress"
+
+#: modules/branding/class-branding-module.php:161
+msgid "Enable"
+msgstr "Activer"
+
+#: modules/branding/class-branding-module.php:162
+#: modules/login-customizer/sections/layout.php:43
+msgid "Layout"
+msgstr "Mise en page"
+
+#: modules/branding/class-branding-module.php:171
+msgid "Admin Bar Logo"
+msgstr "Logo de la barre d’administration"
+
+#: modules/branding/class-branding-module.php:172
+msgid "Admin Bar Logo URL"
+msgstr "URL du logo de la barre d’administration"
+
+#: modules/branding/class-branding-module.php:176
+msgid "Footer Text"
+msgstr "Texte du pied de page"
+
+#: modules/branding/class-branding-module.php:177
+msgid "Version Text"
+msgstr "Texte de la version"
+
+#: modules/branding/templates/fields/admin-bar-logo.php:18
+#: modules/branding/templates/fields/block-editor-logo.php:18
+msgid "Add or Upload File"
+msgstr "Ajouter ou téléverser un fichier"
+
+#: modules/branding/templates/fields/admin-bar-logo.php:25
+msgid "Remove Admin Bar Logo"
+msgstr "Retirer le logo de la barre d’administration"
+
+#: modules/login-customizer/controls/class-udb-customize-range-control.php:79
+msgid "Reset Value"
+msgstr "Réinitialiser la valeur"
+
+#: modules/login-customizer/inc/add-sections.php:23
+#: modules/login-customizer/sections/logo.php:36
+msgid "Logo"
+msgstr "Logo"
+
+#: modules/login-customizer/inc/add-sections.php:31
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: modules/login-customizer/inc/add-sections.php:39
+msgid "Login Form"
+msgstr "Formulaire de connexion"
+
+#: modules/login-customizer/inc/add-sections.php:47
+msgid "Input Fields"
+msgstr "Champs de saisie"
+
+#: modules/login-customizer/inc/add-sections.php:55
+msgid "Labels"
+msgstr "Libellés"
+
+#: modules/login-customizer/inc/add-sections.php:63
+msgid "Log In Button"
+msgstr "Bouton de connexion"
+
+#: modules/login-customizer/inc/add-sections.php:79
+msgid "Welcome Messages"
+msgstr "Messages de bienvenue"
+
+#: modules/login-customizer/inc/add-sections.php:87
+msgid "Error Messages"
+msgstr "Messages d’erreur"
+
+#: modules/login-customizer/inc/add-sections.php:95
+msgid "Redirect"
+msgstr "Rediriger"
+
+#: modules/login-customizer/sections/layout.php:119
+msgid "Background Image"
+msgstr "Image d’arrière-plan"
+
+#: modules/login-customizer/sections/button.php:37
+#: modules/login-customizer/sections/fields.php:37
+msgid "Height"
+msgstr "Hauteur"
+
+#: modules/login-customizer/sections/button.php:95
+#: modules/login-customizer/sections/fields.php:124
+#: modules/login-customizer/sections/layout.php:504
+msgid "Border Radius"
+msgstr "Rayon de bordure"
+
+#: modules/login-customizer/sections/button.php:121
+#: modules/login-customizer/sections/fields.php:179
+#: modules/login-customizer/sections/labels.php:63
+msgid "Text Color"
+msgstr "Couleur du texte"
+
+#: modules/login-customizer/sections/fields.php:95
+#: modules/login-customizer/sections/layout.php:418
+msgid "Border Width"
+msgstr "Largeur de bordure"
+
+#: modules/login-customizer/sections/fields.php:271
+#: modules/login-customizer/sections/layout.php:476
+msgid "Border Color"
+msgstr "Couleur de bordure"
+
+#: modules/login-customizer/sections/form-footer.php:34
+msgid "Link Color"
+msgstr "Couleur du lien"
+
+#: modules/login-customizer/sections/layout.php:298
+#: modules/login-customizer/sections/layout.php:558
+msgid "Width"
+msgstr "Largeur"
+
+#: modules/login-customizer/sections/layout.php:328
+msgid "Top Padding"
+msgstr "Marge interne supérieure"
+
+#: modules/login-customizer/sections/layout.php:358
+msgid "Bottom Padding"
+msgstr "Marge interne inférieure"
+
+#: modules/login-customizer/sections/logo.php:67
+msgid "Logo Height"
+msgstr "Hauteur du logo"
+
+#: modules/login-customizer/sections/logo.php:96
+msgid "Logo URL"
+msgstr "URL du logo"
+
+#: modules/login-customizer/sections/logo.php:124
+msgid "Logo Title"
+msgstr "Titre du logo"
+
+#: modules/login-customizer/templates/udb-login-page.php:129
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: modules/login-customizer/templates/udb-login-page.php:158
+msgid "Powered by WordPress"
+msgstr "Propulsé par WordPress"
+
+#. translators: %s: Site name.
+#: modules/login-customizer/templates/udb-login-page.php:485
+msgid "Site Name: %s"
+msgstr "Nom du site : %s"
+
+#. translators: %s: User login.
+#: modules/login-customizer/templates/udb-login-page.php:487
+msgid "Username: %s"
+msgstr "Identifiant : %s"
+
+#: modules/login-customizer/templates/udb-login-page.php:488
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr "S’il s’agit d’une erreur, ignorez simplement cet e-mail et rien ne se produira."
+
+#: modules/login-customizer/templates/udb-login-page.php:489
+msgid "To reset your password, visit the following address:"
+msgstr "Pour réinitialiser votre mot de passe, visitez l’adresse suivante :"
+
+#. translators: Password reset notification email subject. %s: Site title.
+#: modules/login-customizer/templates/udb-login-page.php:493
+msgid "[%s] Password Reset"
+msgstr "[%s] Réinitialisation du mot de passe"
+
+#. translators: %s: Documentation URL.
+#: modules/login-customizer/templates/udb-login-page.php:527
+msgid "<strong>ERROR</strong>: The email could not be sent. Your site may not be correctly configured to send emails. <a href=\"%s\">Get support for resetting your password</a>."
+msgstr "<strong>ERREUR</strong> : l’e-mail n’a pas pu être envoyé. Votre site peut ne pas être correctement configuré pour envoyer des e-mails. <a href=\"%s\">Demandez de l’aide pour la réinitialisation de votre mot de passe</a>."
+
+#: modules/login-customizer/templates/udb-login-page.php:528
+msgid "https://wordpress.org/support/article/resetting-your-password/"
+msgstr "https://wordpress.org/support/article/resetting-your-password/"
+
+#: modules/login-customizer/templates/udb-login-page.php:697
+msgid "Confirm your administration email"
+msgstr "Confirmez votre e-mail d’administration"
+
+#. translators: URL to the WordPress help section about admin email.
+#: modules/login-customizer/templates/udb-login-page.php:733
+msgid "https://wordpress.org/support/article/settings-general-screen/#email-address"
+msgstr "https://wordpress.org/support/article/settings-general-screen/#email-address"
+
+#: modules/login-customizer/templates/udb-login-page.php:770
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: modules/login-customizer/templates/udb-login-page.php:908
+msgid "Lost Password"
+msgstr "Mot de passe oublié"
+
+#: modules/login-customizer/templates/udb-login-page.php:920
+#: modules/login-customizer/templates/udb-login-page.php:1247
+msgid "Username or Email Address"
+msgstr "Identifiant ou adresse e-mail"
+
+#: modules/login-customizer/templates/udb-login-page.php:944
+#: modules/login-customizer/templates/udb-login-page.php:1079
+#: modules/login-customizer/templates/udb-login-page.php:1175
+#: modules/login-customizer/templates/udb-login-page.php:1307
+msgid "Register"
+msgstr "S’inscrire"
+
+#: modules/login-customizer/templates/udb-login-page.php:999
+msgid "The passwords do not match."
+msgstr "Les mots de passe ne correspondent pas."
+
+#: modules/login-customizer/templates/udb-login-page.php:1015
+msgid "Your password has been reset."
+msgstr "Votre mot de passe a été réinitialisé."
+
+#: modules/login-customizer/templates/udb-login-page.php:1023
+#: modules/login-customizer/templates/udb-login-page.php:1070
+msgid "Reset Password"
+msgstr "Réinitialiser le mot de passe"
+
+#: modules/login-customizer/templates/udb-login-page.php:1031
+msgid "New password"
+msgstr "Nouveau mot de passe"
+
+#: modules/login-customizer/templates/udb-login-page.php:1044
+msgid "Confirm use of weak password"
+msgstr "Confirmer l’utilisation d’un mot de passe faible"
+
+#: modules/login-customizer/templates/udb-login-page.php:1049
+msgid "Confirm new password"
+msgstr "Confirmer le nouveau mot de passe"
+
+#: modules/login-customizer/templates/udb-login-page.php:1147
+msgid "Registration Form"
+msgstr "Formulaire d’inscription"
+
+#: modules/login-customizer/templates/udb-login-page.php:1152
+msgid "Username"
+msgstr "Identifiant"
+
+#: modules/login-customizer/templates/udb-login-page.php:1156
+msgid "Email"
+msgstr "E-mail"
+
+#: modules/login-customizer/templates/udb-login-page.php:1170
+msgid "Registration confirmation will be emailed to you."
+msgstr "La confirmation d’inscription vous sera envoyée par e-mail."
+
+#: modules/login-customizer/templates/udb-login-page.php:1191
+msgid "Missing request ID."
+msgstr "ID de requête manquant."
+
+#: modules/login-customizer/templates/udb-login-page.php:1195
+msgid "Missing confirm key."
+msgstr "Clé de confirmation manquante."
+
+#: modules/login-customizer/templates/udb-login-page.php:1223
+msgid "User action confirmed."
+msgstr "Action de l’utilisateur confirmée."
+
+#: modules/login-customizer/templates/udb-login-page.php:1252
+msgid "Password"
+msgstr "Mot de passe"
+
+#: modules/setting/class-setting-module.php:98
+msgid "3rd Party Widgets"
+msgstr "Widgets tiers"
+
+#: modules/setting/class-setting-module.php:127
+msgid "Icon/Text Color"
+msgstr "Couleur texte/icône"
+
+#: modules/widget/templates/metaboxes/main.php:16
+msgid "HTML Widget"
+msgstr "Widget HTML"
+
+#: modules/login-customizer/templates/udb-login-page.php:1272
+msgid "Remember Me"
+msgstr "Se souvenir de moi"
+
+#: modules/login-customizer/templates/udb-login-page.php:1255
+msgid "Show password"
+msgstr "Afficher le mot de passe"
+
+#: modules/login-customizer/templates/udb-login-page.php:1037
+msgid "Hide password"
+msgstr "Masquer le mot de passe"
+
+#: modules/login-customizer/templates/udb-login-page.php:935
+msgid "Get New Password"
+msgstr "Obtenir un nouveau mot de passe"
+
+#: modules/login-customizer/templates/udb-login-page.php:771
+msgid "The email is correct"
+msgstr "L’e-mail est correct"
+
+#: modules/admin-bar/templates/template.php:66
+#: modules/admin-bar/templates/template.php:104
+#: modules/admin-menu/templates/template.php:68
+#: modules/admin-menu/templates/template.php:187
+#: modules/branding/templates/fields/admin-submenu-bg-color.php:20
+#: modules/branding/templates/fields/block-editor-logo.php:33
+#: modules/login-customizer/controls/class-udb-customize-pro-control.php:61
+#: modules/login-customizer/templates/udb-login-page.php:206
+#: modules/setting/templates/fields/remove-3rd-party-widgets.php:47
+msgid "This feature is available in Ultimate Dashboard PRO."
+msgstr "Cette fonctionnalité est disponible avec Ultimate Dashboard Pro."
+
+#: modules/branding/class-branding-module.php:165
+msgid "Accent Color"
+msgstr "Couleur d’accentuation"
+
+#: modules/feature/templates/feature-template.php:24
+#: modules/login-customizer/class-login-customizer-module.php:107
+#: modules/login-customizer/class-login-customizer-module.php:249
+#: modules/plugin-onboarding/templates/plugin-onboarding-template.php:20
+msgid "Login Customizer"
+msgstr "Outil de personnalisation de connexion"
+
+#: modules/login-customizer/sections/bg.php:35
+#: modules/login-customizer/sections/button.php:167
+#: modules/login-customizer/sections/fields.php:225
+#: modules/login-customizer/sections/layout.php:94
+msgid "Background Color"
+msgstr "Couleur de l’arrière-plan"
+
+#: modules/login-customizer/sections/button.php:66
+#: modules/login-customizer/sections/fields.php:66
+#: modules/login-customizer/sections/layout.php:388
+msgid "Side Padding"
+msgstr "Marge interne latérale"
+
+#: modules/login-customizer/sections/button.php:144
+msgid "Text Color (Hover)"
+msgstr "Couleur du texte (au survol)"
+
+#: modules/login-customizer/sections/button.php:190
+msgid "Background Color (Hover)"
+msgstr "Couleur d’arrière-plan (au survol)"
+
+#: modules/login-customizer/sections/fields.php:202
+msgid "Text Color (Focus)"
+msgstr "Couleur du texte (au focus)"
+
+#: modules/login-customizer/sections/fields.php:248
+msgid "Background Color (Focus)"
+msgstr "Couleur d’arrière-plan (au focus)"
+
+#: modules/login-customizer/sections/fields.php:294
+msgid "Border Color (Focus)"
+msgstr "Couleur de bordure (au focus)"
+
+#: modules/login-customizer/sections/form-footer.php:57
+msgid "Link Color (Hover)"
+msgstr "Couleur du lien (au survol)"
+
+#: modules/login-customizer/sections/layout.php:69
+msgid "More layouts (left & right) available in Ultimate Dashboard PRO."
+msgstr "Plus de mises en page (gauche et droite) disponibles dans Ultimate Dashboard Pro."
+
+#. translators: Login screen title. 1: Login screen name, 2: Network or site
+#. name.
+#: modules/login-customizer/templates/udb-login-page.php:84
+msgid "%1$s &lsaquo; %2$s &#8212; WordPress"
+msgstr "%1$s & %2$s — WordPress"
+
+#. translators: %s: Login screen title.
+#: modules/login-customizer/templates/udb-login-page.php:88
+msgid "Recovery Mode &#8212; %s"
+msgstr "Mode de récupération — %s"
+
+#: modules/login-customizer/templates/udb-login-page.php:155
+msgid "Usage of the title attribute on the login logo is not recommended for accessibility reasons. Use the link text instead."
+msgstr "L’utilisation de l’attribut de titre sur le logo de connexion n’est pas recommandée pour des raisons d’accessibilité. Utilisez le texte du lien à la place."
+
+#: modules/login-customizer/templates/udb-login-page.php:433
+msgid "<strong>ERROR</strong>: Enter a username or email address."
+msgstr "<strong>Erreur</strong> : saisissez un identifiant ou une adresse e-mail."
+
+#. translators: %s: Site title.
+#: modules/login-customizer/templates/udb-login-page.php:301
+msgctxt "site"
+msgid "&larr; Back to %s"
+msgstr "&larr; Retour sur %s"
+
+#: modules/login-customizer/templates/udb-login-page.php:1147
+msgid "Register For This Site"
+msgstr "S’inscrire sur ce site"
+
+#: modules/login-customizer/templates/udb-login-page.php:1182
+#: modules/login-customizer/templates/udb-login-page.php:1316
+msgid "Lost your password?"
+msgstr "Mot de passe oublié ?"
+
+#: modules/login-customizer/templates/udb-login-page.php:741
+msgid "Why is this important?"
+msgstr "Pourquoi est-ce important ?"
+
+#. translators: %s: Admin email address.
+#: modules/login-customizer/templates/udb-login-page.php:752
+msgid "Current administration email: %s"
+msgstr "E-mail d’administration actuel : %s"
+
+#: modules/login-customizer/templates/udb-login-page.php:1236
+#: modules/login-customizer/templates/udb-login-page.php:1274
+msgid "Log In"
+msgstr "Se connecter"
+
+#: modules/setting/class-setting-module.php:128
+msgid "Headline Color"
+msgstr "Couleur du titre"
+
+#: modules/setting/templates/fields/remove-3rd-party-widgets.php:18
+msgid "No 3rd Party Widgets available."
+msgstr "Aucun widgets tiers disponible."
+
+#: modules/login-customizer/templates/udb-login-page.php:437
+#: modules/login-customizer/templates/udb-login-page.php:460
+msgid "<strong>ERROR</strong>: There is no account with that username or email address."
+msgstr "<strong>ERREUR</strong> : il n’y a pas de compte avec cet identifiant ou cette adresse de messagerie."
+
+#: modules/login-customizer/templates/udb-login-page.php:483
+msgid "Someone has requested a password reset for the following account:"
+msgstr "Quelqu’un a demandé la réinitialisation du mot de passe pour le compte suivant :"
+
+#: modules/login-customizer/templates/udb-login-page.php:1023
+msgid "Enter your new password below."
+msgstr "Saisissez votre nouveau mot de passe ci-dessous."
+
+#: modules/login-customizer/templates/udb-login-page.php:1015
+msgid "Password Reset"
+msgstr "Réinitialisation du mot de passe"
+
+#: modules/login-customizer/templates/udb-login-page.php:940
+#: modules/login-customizer/templates/udb-login-page.php:1015
+#: modules/login-customizer/templates/udb-login-page.php:1075
+#: modules/login-customizer/templates/udb-login-page.php:1180
+msgid "Log in"
+msgstr "Se connecter"
+
+#: modules/login-customizer/templates/udb-login-page.php:908
+msgid "Please enter your username or email address. You will receive a link to create a new password via email."
+msgstr "Veuillez saisir votre identifiant ou votre adresse de messagerie. Un lien permettant de créer un nouveau mot de passe vous sera envoyé par e-mail."
+
+#: modules/login-customizer/templates/udb-login-page.php:787
+msgid "Remind me later"
+msgstr "Me le rappeler ultérieurement"
+
+#. translators: accessibility text
+#: modules/login-customizer/templates/udb-login-page.php:736
+msgid "(opens in a new tab)"
+msgstr "(s’ouvre dans un nouvel onglet)"
+
+#: modules/login-customizer/templates/udb-login-page.php:759
+msgid "This email may be different from your personal email address."
+msgstr "Cet e-mail peut être différent de votre adresse de messagerie personnelle."
+
+#: modules/login-customizer/templates/udb-login-page.php:729
+msgid "Please verify that the <strong>administration email</strong> for this website is still correct."
+msgstr "Veuillez vérifier que <strong>l’e-mail d’administration</strong> pour ce site est toujours correct."
+
+#: modules/login-customizer/templates/udb-login-page.php:726
+msgid "Administration email verification"
+msgstr "Vérification de l’e-mail d’administration"
+
+#: modules/login-customizer/templates/udb-login-page.php:881
+msgid "Your password reset link appears to be invalid. Please request a new link below."
+msgstr "Votre lien de réinitialisation de mot de passe semble ne pas être valide. Veuillez demander un nouveau lien ci-dessous."
+
+#: modules/login-customizer/templates/udb-login-page.php:883
+msgid "Your password reset link has expired. Please request a new link below."
+msgstr "Votre lien de réinitialisation de mot de passe semble avoir expiré. Veuillez demander un nouveau lien ci-dessous."
+
+#: modules/login-customizer/templates/udb-login-page.php:1040
+msgid "Strength indicator"
+msgstr "Indicateur de robustesse"
+
+#: modules/admin-bar/templates/template.php:68
+#: modules/admin-bar/templates/template.php:106
+#: modules/admin-menu/templates/template.php:70
+#: modules/admin-menu/templates/template.php:189
+#: modules/admin-page/templates/metaboxes/pro-link.php:19
+#: modules/branding/templates/fields/admin-submenu-bg-color.php:23
+#: modules/branding/templates/fields/block-editor-logo.php:36
+#: modules/login-customizer/controls/class-udb-customize-pro-control.php:65
+#: modules/login-customizer/templates/udb-login-page.php:208
+#: modules/setting/templates/fields/remove-3rd-party-widgets.php:50
+#: modules/widget/templates/metaboxes/pro-link.php:21
+msgid "Get Ultimate Dashboard PRO"
+msgstr "Obtenez Ultimate Dashboard PRO"
+
+#: modules/setting/class-setting-module.php:110
+#: modules/setting/templates/settings-template.php:48
+msgid "General"
+msgstr "Général"
+
+#: modules/setting/class-setting-module.php:145
+msgid "Remove Admin Bar from Frontend"
+msgstr "Retirer la barre d’administration du site en ligne"
+
+#: modules/setting/class-setting-module.php:146
+msgid "Custom Dashboard Headline"
+msgstr "Titre du tableau de bord personnalisé"
+
+#: modules/admin-bar/class-admin-bar-module.php:93
+#: modules/setting/templates/fields/headline-text.php:16
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: modules/setting/class-setting-module.php:143
+msgid "Remove Help Tab"
+msgstr "Retirer l’onglet d’aide"
+
+#: modules/setting/class-setting-module.php:144
+msgid "Remove Screen Options Tab"
+msgstr "Retirer l’onglet d’options de l’écran"
+
+#: modules/setting/class-setting-module.php:162
+msgid "Custom Admin CSS"
+msgstr "CSS personnalisé de l’admin"
+
+#: modules/setting/class-setting-module.php:157
+msgid "Remove Data on Uninstall"
+msgstr "Supprimer les données lors de la désinstallation"
+
+#. Author of the plugin
+msgid "David Vongries"
+msgstr "David Vongries"
+
+#: modules/admin-page/class-admin-page-module.php:106
+#: modules/widget/class-widget-module.php:84
+msgid "Custom field updated."
+msgstr "Champ personnalisé mis à jour."
+
+#: modules/admin-page/class-admin-page-module.php:107
+#: modules/widget/class-widget-module.php:85
+msgid "Custom field deleted."
+msgstr "Champ personnalisé supprimé."
+
+#: modules/admin-page/class-admin-page-module.php:262
+msgid "Advanced"
+msgstr "Avancé"
+
+#: modules/setting/class-setting-module.php:124
+msgid "Remove 3rd Party Widgets"
+msgstr "Retirer les widgets tiers"
+
+#: modules/tool/inc/process-import.php:40
+msgid "Please upload a file to import"
+msgstr "Veuillez téléverser un fichier à importer"
+
+#: modules/tool/inc/process-import.php:108
+msgid "Settings imported"
+msgstr "Réglages importés"
+
+#: modules/tool/inc/process-import.php:155
+msgid "Widgets imported"
+msgstr "Widgets importés"
+
+#: modules/widget/class-widget-module.php:83
+#: modules/widget/class-widget-module.php:86
+msgid "Widget updated."
+msgstr "Widget mis à jour."
+
+#. translators: %s: Date and time of the revision
+#: modules/widget/class-widget-module.php:89
+msgid "Widget published."
+msgstr "Widget publié."
+
+#: modules/widget/class-widget-module.php:90
+msgid "Widget saved."
+msgstr "Widget enregistré."
+
+#: modules/widget/class-widget-module.php:91
+msgid "Widget submitted."
+msgstr "Widget envoyé."
+
+#: modules/widget/class-widget-module.php:114
+#: modules/widget/templates/metaboxes/main.php:27
+msgid "Widget Type"
+msgstr "Type de widget"
+
+#: modules/widget/inc/column-content.php:24
+msgid "Text"
+msgstr "Texte"
+
+#: modules/widget/templates/metaboxes/main.php:15
+msgid "Text Widget"
+msgstr "Widget de texte"
+
+#: modules/widget/templates/widget-types/text-widget.php:29
+msgid "Content"
+msgstr "Contenu"
+
+#: modules/widget/templates/widget-types/text-widget.php:38
+msgid "Fixed Height"
+msgstr "Hauteur fixe"
+
+#: modules/widget/inc/post-type.php:15
+msgctxt "Admin Menu text"
+msgid "Ultimate Dash..."
+msgstr "Ultimate Dash…"
+
+#: modules/tool/templates/fields/import-field.php:17
+msgid "Select File"
+msgstr "Sélectionner un fichier"
+
+#. translators: Publish box date format, see http://php.net/date for more info.
+#: modules/admin-page/class-admin-page-module.php:117
+#: modules/widget/class-widget-module.php:95
+msgid "M j, Y @ G:i"
+msgstr "j F Y \\à G \\h i \\m\\i\\n"
+
+#: modules/admin-page/templates/icon-selector.php:32
+#: modules/widget/templates/widget-types/icon-widget.php:47
+msgid "Select Icon"
+msgstr "Sélectionner une icône"
+
+#: modules/widget/templates/widget-types/icon-widget.php:55
+msgid "Tooltip"
+msgstr "Infobulle"
+
+#: modules/widget/class-widget-module.php:93
+msgid "Widget scheduled for: <strong>%1$s</strong>."
+msgstr "Widget planifié pour : <strong>%1$s</strong>."
+
+#: modules/widget/class-widget-module.php:97
+msgid "Widget draft updated."
+msgstr "Brouillon du widget mis à jour."
+
+#: modules/tool/inc/process-import.php:26
+msgid "Please upload a valid .json file"
+msgstr "Veuillez téléverser un fichier .json valide"
+
+#. translators: %s: Date and time of the revision
+#: modules/widget/class-widget-module.php:88
+msgid "Widget restored to revision from %s"
+msgstr "Widget rétabli à partir de la révision du %s"
+
+#: modules/setting/class-setting-module.php:161
+msgid "Custom Dashboard CSS"
+msgstr "CSS personnalisé du tableau de bord"
+
+#: modules/widget/inc/post-type.php:17
+msgid "Add Dashboard Widget"
+msgstr "Ajouter un widget de tableau de bord"
+
+#: modules/widget/inc/post-type.php:16
+msgctxt "Add New on Toolbar"
+msgid "Dashboard Widget"
+msgstr "Widget de tableau de bord"
+
+#: modules/admin-page/inc/column-content.php:78
+#: modules/setting/templates/fields/remove-all-widgets.php:17
+#: modules/widget/inc/column-content.php:36
+msgid "All"
+msgstr "Tous"
+
+#: modules/widget/inc/post-type.php:21
+msgid "All Widgets"
+msgstr "Tous les widgets"
+
+#: modules/login-customizer/sections/layout.php:46
+#: modules/widget/templates/metaboxes/priority.php:26
+msgid "Default"
+msgstr "Par défaut"
+
+#. Plugin URI of the plugin
+msgid "https://ultimatedashboard.io/"
+msgstr "https://ultimatedashboard.io/"
+
+#: modules/widget/templates/widget-types/icon-widget.php:20
+msgid "Icon"
+msgstr "Icône"
+
+#: modules/widget/templates/metaboxes/main.php:14
+msgid "Icon Widget"
+msgstr "Icône du widget"
+
+#: modules/widget/templates/metaboxes/position.php:26
+msgid "Left column"
+msgstr "Colonne de gauche"
+
+#: modules/widget/templates/widget-types/icon-widget.php:65
+msgid "Link"
+msgstr "Lien"
+
+#: modules/widget/templates/metaboxes/priority.php:32
+msgid "Low"
+msgstr "Faible"
+
+#: modules/branding/class-branding-module.php:158
+#: modules/setting/class-setting-module.php:119
+msgid "Misc"
+msgstr "Divers"
+
+#: modules/widget/inc/post-type.php:18
+msgid "New Dashboard Widget"
+msgstr "Nouveau widget de tableau de bord"
+
+#: modules/widget/inc/post-type.php:23
+msgid "No Dashboard Widgets found."
+msgstr "Aucun widget de tableau de bord trouvé."
+
+#: modules/widget/inc/post-type.php:24
+msgid "No Dashboard Widgets in Trash."
+msgstr "Aucun widget de tableau de bord dans la corbeille."
+
+#: modules/widget/templates/widget-types/icon-widget.php:76
+msgid "Open link in a new tab."
+msgstr "Ouvrir le lien dans un nouvel onglet."
+
+#: modules/widget/inc/post-type.php:13
+msgctxt "Post type general name"
+msgid "Dashboard Widgets"
+msgstr "Widgets de tableau de bord"
+
+#: modules/widget/inc/post-type.php:14
+msgctxt "Post type singular name"
+msgid "Dashboard Widget"
+msgstr "Widget de tableau de bord"
+
+#: modules/widget/class-widget-module.php:200
+msgid "Priority"
+msgstr "Priorité"
+
+#: modules/setting/class-setting-module.php:122
+msgid "Remove All Widgets"
+msgstr "Retirer tous les widgets"
+
+#: modules/setting/class-setting-module.php:123
+msgid "Remove Individual Widgets"
+msgstr "Retirer les widgets individuellement"
+
+#: modules/widget/templates/metaboxes/position.php:32
+msgid "Right column"
+msgstr "Colonne de droite"
+
+#: modules/widget/inc/post-type.php:22
+msgid "Search Dashboard Widgets"
+msgstr "Rechercher des widgets de tableau de bord"
+
+#: class-setup.php:202 modules/admin-bar/templates/menu-list.php:43
+#: modules/admin-bar/templates/submenu-list.php:40
+#: modules/admin-menu/templates/menu-list.php:41
+#: modules/setting/class-setting-module.php:55
+#: modules/tool/templates/fields/export-field.php:25
+msgid "Settings"
+msgstr "Réglages"
+
+#. Plugin Name of the plugin
+#: modules/setting/templates/settings-template.php:23
+#: modules/widget/class-widget-module.php:191
+msgid "Ultimate Dashboard"
+msgstr "Ultimate Dashboard"
+
+#: modules/widget/templates/metaboxes/pro-link.php:14
+msgid "Video Widgets"
+msgstr "Widget vidéo"
+
+#: modules/widget/inc/post-type.php:20
+msgid "View Dashboard Widget"
+msgstr "Voir le widget du tableau de bord"
+
+#: modules/setting/class-setting-module.php:104
+#: modules/setting/templates/fields/remove-individual-widgets.php:22
+msgid "Welcome Panel"
+msgstr "Panneau de bienvenue"
+
+#: modules/setting/class-setting-module.php:97
+msgid "WordPress Dashboard Widgets"
+msgstr "Widgets du tableau de bord WordPress"
+
+#: modules/widget/class-widget-module.php:113
+msgid "Widget Title"
+msgstr "Titre du widget"
+
+#: modules/widget/inc/post-type.php:19
+msgid "Edit Dashboard Widget"
+msgstr "Modifier le widget du tableau de bord"
+
+#: modules/widget/templates/widget-types/icon-widget.php:71
+msgid "Absolute URL's (incl. http:// or https://) or relative URL's (./post-new.php) are allowed."
+msgstr "Les URL absolues (incl. http:// ou https://) ou relatives (./post-New.php) sont autorisées."
+
+#: modules/widget/class-widget-module.php:199
+msgid "Position"
+msgstr "Emplacement"
+
+#: modules/widget/templates/metaboxes/priority.php:38
+msgid "High"
+msgstr "Élevée"
