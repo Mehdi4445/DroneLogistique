@@ -106,29 +106,40 @@ add_action( 'wp_ajax_nopriv_wpbo_search_response', 'qc_wpbo_search_response' );
 function qc_wpbo_search_response(){
 	global $wpdb;
 	$keyword = (sanitize_text_field($_POST['keyword']));
+	$strid = (sanitize_text_field($_POST['strid']));
 	$table = $wpdb->prefix.'wpbot_response';
 	
 
 	$response_result = array();
 
 	$status = array('status'=>'fail', 'multiple'=>false);
-
-	$results = $wpdb->get_results("SELECT `query`, `response` FROM `$table` WHERE 1 and `query` = '".$keyword."'");
+	if(($strid != '') && empty($response_result)){
+		$results = $wpdb->get_results("SELECT * FROM `$table` WHERE `ID` = ".$strid);	
+		if(!empty($results)){
+			foreach($results as $result){
+				
+				$response_result[] = array('id'=>$result->id,'query'=>$result->query, 'response'=>$result->response, 'score'=>1);
+				
+			}
+		}
+	}
+	
+	$results = $wpdb->get_results("SELECT `id`, `query`, `response` FROM `$table` WHERE 1 and `query` = '".$keyword."'");
 	
 	if(!empty($results)){
 		foreach($results as $result){
 			
-			$response_result[] = array('query'=>$result->query, 'response'=>$result->response, 'score'=>1);
+			$response_result[] = array('id'=>$result->id,'query'=>$result->query, 'response'=>$result->response, 'score'=>1);
 			
 		}
 	}
-	
 	if(empty($response_result)){
-		$results = $wpdb->get_results("SELECT `query`, `response` FROM `$table` WHERE 1 and `category` = '".$keyword."'");
+		$results = $wpdb->get_results("SELECT `id`, `query`, `response` FROM `$table` WHERE 1 and `category` = '".$keyword."'");
+		
 		
 		if(!empty($results)){
 			foreach($results as $result){
-				$response_result[] = array('query'=>$result->query, 'response'=>$result->response, 'score'=>1);
+				$response_result[] = array('id'=>$result->id,'query'=>$result->query, 'response'=>$result->response, 'score'=>1);
 			}
 			if(count($response_result)>1){
 				$status = array('status'=>'success','category'=> true, 'multiple'=>true, 'data'=>$response_result);
@@ -160,14 +171,14 @@ function qc_wpbo_search_response(){
 		}
 		$sql = "ALTER TABLE `{$table}` ADD FULLTEXT($qfields);";
 		$wpdb->query( $sql );
-		$sql_text = "SELECT  MATCH($qfields) AGAINST('".$keyword."' IN NATURAL LANGUAGE MODE) as score FROM `$table` WHERE MATCH($qfields) AGAINST('".$keyword."' IN NATURAL LANGUAGE MODE) order by score desc limit 15";
+		$sql_text = "SELECT `id`, `query`, `response`, MATCH($qfields) AGAINST('".$keyword."' IN NATURAL LANGUAGE MODE) as score FROM $table WHERE MATCH($qfields) AGAINST('".$keyword."' IN NATURAL LANGUAGE MODE) order by score desc limit 15";
 		$results = $wpdb->get_results($sql_text);
+		
 		$weight = get_option('qc_bot_str_weight')!=''?get_option('qc_bot_str_weight'):'0.4';
-		//$weight = 0;
 		if(!empty($results)){
 			foreach($results as $result){
-				if(intval($result->score) >= intval($weight)){
-					$response_result[] = array('query'=>$result->query, 'response'=>$result->response, 'score'=>$result->score);
+				if(($result->score) >= ($weight)){
+					$response_result[] = array('id'=>$result->id,'query'=>$result->query, 'response'=>$result->response, 'score'=>$result->score);
 				}
 			}
 		}
@@ -177,13 +188,12 @@ function qc_wpbo_search_response(){
 		$results = $wpdb->get_results("SELECT * FROM `$table` WHERE `keyword` REGEXP '".$keyword."'");
 		if(!empty($results)){
 			foreach($results as $result){
-				$response_result[] = array('query'=>$result->query, 'response'=>$result->response, 'score'=>1);
+				$response_result[] = array('id'=>$result->id,'query'=>$result->query, 'response'=>$result->response, 'score'=>1);
 			}
 		}
 	}
-
 	if(!empty($response_result)){
-
+		
 		if(count($response_result)>1){
 			$status = array('status'=>'success', 'multiple'=>true, 'data'=>$response_result);
 		}else{

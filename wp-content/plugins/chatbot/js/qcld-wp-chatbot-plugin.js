@@ -737,7 +737,6 @@ var wpwKits;
                                 localStorage.setItem("supportStep", globalwpw.supportStep);*/
 
                             }else if(userIntent=='Default Fallback Intent'){
-							console.log('111');
 								var data = {'action':'wpbo_search_response','name':globalwpw.hasNameCookie,'keyword':msg};
 								wpwKits.ajax(data).done(function (respond) {
 
@@ -747,7 +746,7 @@ var wpwKits;
 											
 											var question='';
                                             $.each(json.data, function (i, obj) {
-                                                question += '<span class="qcld-chatbot-wildcard qcld_simple_txt_response">'+ obj.query +'</span>';
+                                                question += '<span class="qcld-chatbot-wildcard qcld_simple_txt_response"  data-strid="'+ obj.id +'">'+ obj.query +'</span>';
                                             });
                                             
                                             
@@ -756,7 +755,7 @@ var wpwKits;
 										}else if(json.multiple){
 											var question='';
 											$.each(json.data, function (i, obj) {
-												question += '<span class="qcld-chatbot-wildcard qcld_simple_txt_response">'+ obj.query +'</span>';
+												question += '<span class="qcld-chatbot-wildcard qcld_simple_txt_response"  data-strid="'+ obj.id +'">'+ obj.query +'</span>';
 											});
 											wpwMsg.double_nobg(wpwKits.randomMsg(globalwpw.settings.obj.did_you_mean),question);
 											   
@@ -1331,7 +1330,7 @@ var wpwKits;
                 }
         },
 		reset: function( msg ){
-			
+			console.log(msg)
 			if( globalwpw.wildCard == 25 && globalwpw.resetStep == 'welcome' ){
 			
 				var restWarning= globalwpw.settings.obj.reset;
@@ -1346,7 +1345,7 @@ var wpwKits;
 			}else if( globalwpw.wildCard == 25 && globalwpw.resetStep == 'answer' ){
 				
 				if( msg.toLowerCase() == globalwpw.settings.obj.yes.toLowerCase() ){
-					console.log('Yes reset');
+					
 					wpwKits.reset();
                     var number = Math.random() // 0.9394456857981651
                     number.toString(36); // '0.xtis06h6'
@@ -1415,9 +1414,6 @@ var wpwKits;
             return index;
         },
        bot:function(msg){
-            //Disable the Editor
-            
-//simple_response_intent
         
             var simple_response_intent = globalwpw.settings.obj.simple_response_intent;
 
@@ -1433,82 +1429,97 @@ var wpwKits;
          //console.log(globalwpw.settings.obj.form_commands, allformname, globalwpw.settings.obj.form_ids);
             
          
-         if(globalwpw.wildcardsHelp.indexOf(msg.toLowerCase())>-1){
-             
-             
-                if(globalwpw.wildCard==7){
-                    wpwTree.formbuilder_force_complete( msg );
-                }
-			
-                if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_help.toLowerCase()){
-                    
-                    globalwpw.wildCard=0;
-                    var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.wildcard_msg);
-                    wpwMsg.double_nobg(serviceOffer,globalwpw.wildcards);
-                }
-				
-                if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_support.toLowerCase()){
-                    globalwpw.wildCard=1;
-                    globalwpw.supportStep='welcome';
-                    wpwTree.support(msg);
-                }
+            if(globalwpw.wildcardsHelp.indexOf(msg.toLowerCase())>-1){
                 
-                if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_product.toLowerCase()){
-                    globalwpw.wildCard=20;
-                    globalwpw.productStep='asking';
-                    wpwTree.product(msg);
-                }
-                if(globalwpw.settings.obj.woocommerce){
-                    if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_catalog.toLowerCase()){
+                
+                    if(globalwpw.wildCard==7){
+                        wpwTree.formbuilder_force_complete( msg );
+                    }
+                
+                    if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_help.toLowerCase()){
+                        
+                        globalwpw.wildCard=0;
+                        var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.wildcard_msg);
+                        wpwMsg.double_nobg(serviceOffer,globalwpw.wildcards);
+                    }
+                    
+                    if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_support.toLowerCase()){
+                        globalwpw.wildCard=1;
+                        globalwpw.supportStep='welcome';
+                        wpwTree.support(msg);
+                    }
+                    
+                    if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_product.toLowerCase()){
                         globalwpw.wildCard=20;
-                        globalwpw.productStep='search';
-                        wpwKits.sugestCat();
+                        globalwpw.productStep='asking';
+                        wpwTree.product(msg);
+                    }
+                    if(globalwpw.settings.obj.woocommerce){
+                        if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_catalog.toLowerCase()){
+                            globalwpw.wildCard=20;
+                            globalwpw.productStep='search';
+                            wpwKits.sugestCat();
+                        }
+
+                        if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_order.toLowerCase()){
+                            globalwpw.wildCard=21;
+                            globalwpw.orderStep='welcome';
+                            wpwTree.order(msg);
+                        }
                     }
 
-                    if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_order.toLowerCase()){
-                        globalwpw.wildCard=21;
-                        globalwpw.orderStep='welcome';
-                        wpwTree.order(msg);
+                    if( globalwpw.settings.obj.open_a_ticket && msg.toLowerCase()==globalwpw.settings.obj.open_a_ticket.toLowerCase() && globalwpw.settings.obj.ticket_url!=''){
+                        //comming
+                        window.open(globalwpw.settings.obj.ticket_url, '_blank');
+                        wpwKits.enableEditor(wpwKits.randomMsg(globalwpw.settings.obj.send_a_msg));
+                        
                     }
-                }
 
-				if( globalwpw.settings.obj.open_a_ticket && msg.toLowerCase()==globalwpw.settings.obj.open_a_ticket.toLowerCase() && globalwpw.settings.obj.ticket_url!=''){
-                    //comming
-					window.open(globalwpw.settings.obj.ticket_url, '_blank');
-					wpwKits.enableEditor(wpwKits.randomMsg(globalwpw.settings.obj.send_a_msg));
-					
-                }
-
-				
-                if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_reset.toLowerCase()){
-                    globalwpw.wildCard=25;
-                    globalwpw.resetStep='welcome';
-                    wpwTree.reset(msg);
-                }
-                if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_email.toLowerCase()){
-                   // var shopperChoice=$(this).text();
-                    wpwMsg.shopper_choice(globalwpw.settings.obj.sys_key_email.toLowerCase());
-                    //Then ask email address
-                    if(typeof(globalwpw.hasNameCookie)=='undefined'|| globalwpw.hasNameCookie==''){
-                        var shopperName=  globalwpw.settings.obj.shopper_demo_name;
-                    }else{
-                        var shopperName=globalwpw.hasNameCookie;
+                    
+                    if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_reset.toLowerCase()){
+                        globalwpw.wildCard=25;
+                        globalwpw.resetStep='welcome';
+                        wpwTree.reset(msg);
                     }
-                    var askEmail= wpwKits.randomMsg(globalwpw.settings.obj.hello)+' '+shopperName+'! '+ wpwKits.randomMsg(globalwpw.settings.obj.asking_email);
-                    wpwMsg.single(askEmail);
-                    //Now updating the support part as .
-                    globalwpw.supportStep='email';
-                    globalwpw.wildCard=1;
-                    //keeping value in localstorage
-                    localStorage.setItem("wildCard",  globalwpw.wildCard);
-                    localStorage.setItem("supportStep",  globalwpw.supportStep);
-                }
-				if( globalwpw.settings.obj.sys_key_livechat && msg.toLowerCase()==globalwpw.settings.obj.sys_key_livechat.toLowerCase()){
-					wpwKits.enableEditor(wpwKits.randomMsg(globalwpw.settings.obj.send_a_msg));
-					if(globalwpw.settings.obj.is_livechat_active){
-						if(globalwpw.settings.obj.disable_livechat_operator_offline==1){
-							if(globalwpw.settings.obj.is_operator_online==1){
-								$(globalwpw.settings.messageWrapper).html(localStorage.getItem("wpwHitory"));
+                
+                    if(msg.toLowerCase()==globalwpw.settings.obj.sys_key_email.toLowerCase()){
+                    // var shopperChoice=$(this).text();
+                        wpwMsg.shopper_choice(globalwpw.settings.obj.sys_key_email.toLowerCase());
+                        //Then ask email address
+                        if(typeof(globalwpw.hasNameCookie)=='undefined'|| globalwpw.hasNameCookie==''){
+                            var shopperName=  globalwpw.settings.obj.shopper_demo_name;
+                        }else{
+                            var shopperName=globalwpw.hasNameCookie;
+                        }
+                        var askEmail= wpwKits.randomMsg(globalwpw.settings.obj.hello)+' '+shopperName+'! '+ wpwKits.randomMsg(globalwpw.settings.obj.asking_email);
+                        wpwMsg.single(askEmail);
+                        //Now updating the support part as .
+                        globalwpw.supportStep='email';
+                        globalwpw.wildCard=1;
+                        //keeping value in localstorage
+                        localStorage.setItem("wildCard",  globalwpw.wildCard);
+                        localStorage.setItem("supportStep",  globalwpw.supportStep);
+                    }
+                    if( globalwpw.settings.obj.sys_key_livechat && msg.toLowerCase()==globalwpw.settings.obj.sys_key_livechat.toLowerCase()){
+                        wpwKits.enableEditor(wpwKits.randomMsg(globalwpw.settings.obj.send_a_msg));
+                        if(globalwpw.settings.obj.is_livechat_active){
+                            if(globalwpw.settings.obj.disable_livechat_operator_offline==1){
+                                if(globalwpw.settings.obj.is_operator_online==1){
+                                    $(globalwpw.settings.messageWrapper).html(localStorage.getItem("wpwHitory"));
+                                    if($('#wbca_signup_fullname').length>0){
+                                        if(localStorage.getItem('shopper')!==null){
+                                            $('#wbca_signup_fullname').val(localStorage.getItem('shopper'));
+                                        }
+                                        if(localStorage.getItem('shopperemail')!==null){
+                                            $('#wbca_signup_email').val(localStorage.getItem('shopperemail'));
+                                        }
+                                    }
+                                    $("#wp-chatbot-board-container").removeClass('active-chat-board');
+                                    $('.wp-chatbot-container').hide();
+                                    $('.wpbot-saas-live-chat').show();
+                                }
+                            }else{
+                                $(globalwpw.settings.messageWrapper).html(localStorage.getItem("wpwHitory"));
                                 if($('#wbca_signup_fullname').length>0){
                                     if(localStorage.getItem('shopper')!==null){
                                         $('#wbca_signup_fullname').val(localStorage.getItem('shopper'));
@@ -1520,351 +1531,357 @@ var wpwKits;
                                 $("#wp-chatbot-board-container").removeClass('active-chat-board');
                                 $('.wp-chatbot-container').hide();
                                 $('.wpbot-saas-live-chat').show();
-							}
-						}else{
-							$(globalwpw.settings.messageWrapper).html(localStorage.getItem("wpwHitory"));
-                            if($('#wbca_signup_fullname').length>0){
-                                if(localStorage.getItem('shopper')!==null){
-                                    $('#wbca_signup_fullname').val(localStorage.getItem('shopper'));
-                                }
-                                if(localStorage.getItem('shopperemail')!==null){
-                                    $('#wbca_signup_email').val(localStorage.getItem('shopperemail'));
-                                }
-                            }
-                            $("#wp-chatbot-board-container").removeClass('active-chat-board');
-                            $('.wp-chatbot-container').hide();
-                            $('.wpbot-saas-live-chat').show();
-						}
-					}
-					
-                }
-
-            }else if(allformname.indexOf(msg.toLowerCase()) > -1 || this.findkey(allformcommand, msg)> -1){
-                //Form builder commands form name
-                
-                if(globalwpw.wildCard==7){
-                    
-                    wpwTree.formbuilder_force_complete( msg );
-                }
-                
-                var index = (allformname.indexOf(msg.toLowerCase()) > -1?allformname.indexOf(msg.toLowerCase()):this.findkey(allformcommand, msg));
-
-                var formid=globalwpw.settings.obj.form_ids[index];
-                globalwpw.wildCard=7;
-                globalwpw.formStep='welcome';
-                wpwTree.formbuilder(formid);
-
-            }else if(simple_response_intent.indexOf(msg.toLowerCase()) > -1){
-                if(globalwpw.wildCard==7){
-                    wpwTree.formbuilder_force_complete( msg );
-                }
-                var data = {'action':'wpbo_search_responseby_intent','name':globalwpw.hasNameCookie,'keyword':msg, 'language':globalwpw.settings.obj.language};
-                // if($(globalwpw.settings.messageLastChild+' .wp-chatbot-comment-loader').length==0){
-                //     $(globalwpw.settings.messageContainer).append(wpwKits.botPreloader());
-                // }
-                wpwKits.ajax(data).done(function (response) {
-                    var json=$.parseJSON(response);
-                    if(json.status=='success'){
-                        wpwMsg.single(json.html);
-						
-                        var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.wildcard_msg);
-
-                        if( typeof(json.followup)!=="undefined" && json.followup!='' ){
-                            setTimeout(function(){
-                                wpwMsg.single(json.followup);
-                            }, globalwpw.settings.preLoadingTime*2);
-                        }else{
-                            if(globalwpw.settings.obj.disable_repeatative!=1){
-                                setTimeout(function(){
-                                    wpwMsg.double_nobg(serviceOffer, globalwpw.wildcards);
-                                }, globalwpw.settings.preLoadingTime*2);
-                            }else{
-                                setTimeout(function(){
-                                    wpwMsg.single_nobg('<span class="qcld-chatbot-wildcard qcld_back_to_start"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
-                                }, globalwpw.settings.preLoadingTime*2);
                             }
                         }
-
-
+                        
                     }
-                })
 
-            }else{
-
-                /*
-                 *   Greeting part
-                 *   bot action
-                 */
-				
-                if(globalwpw.wildCard==0){
-					//When intialize 1 and don't have cookies then keep  the name of shooper in in cookie
-					if(globalwpw.initialize==1 && !localStorage.getItem('shopper')  && globalwpw.wildCard==0){
-						wpwTree.greeting(msg);
-					}else if(globalwpw.settings.obj.ai_df_enable==1 && globalwpw.df_status_lock==0){
-						wpwTree.greeting(msg);
-					}else if(localStorage.getItem('default_asking_email')){
-                        wpwTree.greeting(msg);
-                    }else if(localStorage.getItem('default_asking_phone')){
-                        wpwTree.greeting(msg);
-                    }else{
-                        //simple text response wrapper
-                        var data = {'action':'wpbo_search_response','name':globalwpw.hasNameCookie,'keyword':msg, 'language':globalwpw.settings.obj.language};
-                        // if($(globalwpw.settings.messageLastChild+' .wp-chatbot-comment-loader').length==0){
-                        //     $(globalwpw.settings.messageContainer).append(wpwKits.botPreloader());
-                        // }
+                }else if(allformname.indexOf(msg.toLowerCase()) > -1 || this.findkey(allformcommand, msg)> -1){
+                    //Form builder commands form name
                     
-                        wpwKits.ajax(data).done(function (response) {
-            
-                            var json=$.parseJSON(response);
-                            if(json.status=='fail' && json.data !==''){
-                                if((globalwpw.settings.obj.openai_enabled == 1) || (wp_chatbot_obj.openai_enabled == 1)){
-                                    wpwTree.openai_reply(msg)
-                                }else{
-                                    wpwMsg.single(globalwpw.settings.obj.empty_filter_msg);
-                                }
+                    if(globalwpw.wildCard==7){
+                        
+                        wpwTree.formbuilder_force_complete( msg );
+                    }
+                    
+                    var index = (allformname.indexOf(msg.toLowerCase()) > -1?allformname.indexOf(msg.toLowerCase()):this.findkey(allformcommand, msg));
 
-                            }else if(json.status=='success'){
-                                if(typeof(json.category)!=="undefined" && json.category){
-											
-									var question='';
-									$.each(json.data, function (i, obj) {
-										question += '<span class="qcld-chatbot-wildcard qcld_simple_txt_response">'+ obj.query +'</span>';
-									});
-									
-									wpwMsg.single_nobg(question);
-							
-								}
-								else if(json.multiple){
-                                    var question='';
-                                    $.each(json.data, function (i, obj) {
-                                        question += '<span class="qcld-chatbot-wildcard qcld_simple_txt_response">'+ obj.query +'</span>';
-                                    });
-                                    wpwMsg.double_nobg(wpwKits.randomMsg(globalwpw.settings.obj.did_you_mean),question);
-                                     
-                                }else{
-                                    
-                                        wpwMsg.single(json.data[0].response);
-                                        var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.wildcard_msg);
-										if( typeof(json.data[0].followup)!=="undefined" && json.data[0].followup!='' ){
-                                            setTimeout(function(){
-                                                wpwMsg.single(json.data[0].followup);
-                                            }, globalwpw.settings.preLoadingTime*2);
-                                        }else{
-                                            if(globalwpw.settings.obj.disable_repeatative!=1){
-                                                setTimeout(function(){
-                                                    wpwMsg.double_nobg(serviceOffer, globalwpw.wildcards);
-                                                }, globalwpw.settings.preLoadingTime*2);
-                                            }else{
-                                                setTimeout(function(){
-                                                    wpwMsg.single_nobg('<span class="qcld-chatbot-wildcard qcld_back_to_start"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
-                                                }, globalwpw.settings.preLoadingTime*2);
-                                            }
-                                        }
-                                    
-                                }
+                    var formid=globalwpw.settings.obj.form_ids[index];
+                    globalwpw.wildCard=7;
+                    globalwpw.formStep='welcome';
+                    wpwTree.formbuilder(formid);
+
+                }else if(simple_response_intent.indexOf(msg.toLowerCase()) > -1){
+                    if(globalwpw.wildCard==7){
+                        wpwTree.formbuilder_force_complete( msg );
+                    }
+                    var data = {'action':'wpbo_search_responseby_intent','name':globalwpw.hasNameCookie,'keyword':msg, 'language':globalwpw.settings.obj.language};
+                    // if($(globalwpw.settings.messageLastChild+' .wp-chatbot-comment-loader').length==0){
+                    //     $(globalwpw.settings.messageContainer).append(wpwKits.botPreloader());
+                    // }
+                    wpwKits.ajax(data).done(function (response) {
+                        var json=$.parseJSON(response);
+                        if(json.status=='success'){
+                            wpwMsg.single(json.html);
+                            
+                            var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.wildcard_msg);
+
+                            if( typeof(json.followup)!=="undefined" && json.followup!='' ){
+                                setTimeout(function(){
+                                    wpwMsg.single(json.followup);
+                                }, globalwpw.settings.preLoadingTime*2);
                             }else{
-                                //Default intents site search
-                                msg = wpwKits.filterStopWords(msg);
+                                if(globalwpw.settings.obj.disable_repeatative!=1){
+                                    setTimeout(function(){
+                                        wpwMsg.double_nobg(serviceOffer, globalwpw.wildcards);
+                                    }, globalwpw.settings.preLoadingTime*2);
+                                }else{
+                                    setTimeout(function(){
+                                        wpwMsg.single_nobg('<span class="qcld-chatbot-wildcard qcld_back_to_start"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
+                                    }, globalwpw.settings.preLoadingTime*2);
+                                }
+                            }
 
-                                if(globalwpw.settings.obj.woocommerce){
 
-                                    var data = {'action':'qcld_wb_chatbot_keyword', 'keyword':msg};
-                                    //Products by string search ajax handler.
-                                    if($(globalwpw.settings.messageLastChild+' .wp-chatbot-comment-loader').length==0){
-                                        $(globalwpw.settings.messageContainer).append(wpwKits.botPreloader());
+                        }
+                    })
+
+                }else{
+
+                    /*
+                    *   Greeting part
+                    *   bot action
+                    */
+                    
+                    if(globalwpw.wildCard==0){
+                        //When intialize 1 and don't have cookies then keep  the name of shooper in in cookie
+                        if(globalwpw.initialize==1 && !localStorage.getItem('shopper')  && globalwpw.wildCard==0){
+                            wpwTree.greeting(msg);
+                        }else if(globalwpw.settings.obj.ai_df_enable==1 && globalwpw.df_status_lock==0){
+                            wpwTree.greeting(msg);
+                        }else if(localStorage.getItem('default_asking_email')){
+                            wpwTree.greeting(msg);
+                        }else if(localStorage.getItem('default_asking_phone')){
+                            wpwTree.greeting(msg);
+                        }else{
+                            //simple text response wrapper
+                            var data = {'action':'wpbo_search_response','name':globalwpw.hasNameCookie,'keyword':msg, 'language':globalwpw.settings.obj.language};
+                            // if($(globalwpw.settings.messageLastChild+' .wp-chatbot-comment-loader').length==0){
+                            //     $(globalwpw.settings.messageContainer).append(wpwKits.botPreloader());
+                            // }
+                        
+                            wpwKits.ajax(data).done(function (response) {
+                
+                                var json=$.parseJSON(response);
+                                if(json.status=='fail' && json.data !==''){
+                                    if((globalwpw.settings.obj.openai_enabled == 1) || (wp_chatbot_obj.openai_enabled == 1)){
+                                        wpwTree.openai_reply(msg)
+                                    }else{
+                                        wpwMsg.single(globalwpw.settings.obj.empty_filter_msg);
                                     }
-                                    wpwKits.ajax(data).done(function( response ) {
-                                        if(response.product_num==0){
-                                            
-                                            if(msg!='' && globalwpw.settings.obj.disable_sitesearch==''){
-                                    
-                                                var data = {'action':'wpbo_search_site','name':globalwpw.hasNameCookie,'keyword':msg};
-                                                if($(globalwpw.settings.messageLastChild+' .wp-chatbot-comment-loader').length==0){
-                                                    $(globalwpw.settings.messageContainer).append(wpwKits.botPreloader());
-                                                }
-                                                wpwKits.ajax(data).done(function (response) {
-                                                    var json=$.parseJSON(response);
-                                                    if(json.status=='success'){
-                                                        $('span[data-wildcart="back"]').remove();
-                                                        wpwMsg.single_nobg(json.html+'<span class="qcld-chatbot-wildcard"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
-                                                        
-                                                    }else{
-                                                        
-                                                        var data = {'action':'wpbo_failed_response','name':globalwpw.hasNameCookie,'keyword':msg};
-                                                            wpwKits.ajax(data).done(function (res) {
-                                                                //
-                                                            })
-                                                        
-                                                        if(globalwpw.counter == globalwpw.settings.obj.no_result_attempt_count || globalwpw.settings.obj.no_result_attempt_count == 0 ){
-                                                                
-                                                            wpwMsg.single(wpwKits.randomMsg(json.html));
-                                                            
-                                                                setTimeout(function(){
-                                                                    var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.support_option_again);
-                                                                    wpwMsg.double_nobg(serviceOffer,globalwpw.wildcards);
-                                                                },globalwpw.settings.preLoadingTime)
-                                                            
-                                                            globalwpw.counter = 0;
-                                                            
-                                                        }else{
-                                                            globalwpw.counter++;
-                                                            wpwMsg.single(wpwKits.randomMsg(json.html));
-                                                        }
-                                                       
-                                                    }
-                                                    globalwpw.wildCard=0;
-                                                });
-                                            }else{
-                                                globalwpw.wildCard=0;
-                                                wpwMsg.single(wpwKits.randomMsg(globalwpw.settings.obj.empty_filter_msg));
+
+                                }else if(json.status=='success'){
+                                    if(typeof(json.category)!=="undefined" && json.category){
                                                 
+                                        var question='';
+                                        $.each(json.data, function (i, obj) {
+                                            question += '<span class="qcld-chatbot-wildcard qcld_simple_txt_response"  data-strid="'+ obj.id +'">'+ obj.query +'</span>';
+                                        });
+                                        
+                                        wpwMsg.single_nobg(question);
+                                
+                                    }
+                                    else if(json.multiple){
+                                        var question='';
+                                        $.each(json.data, function (i, obj) {
+                                            question += '<span class="qcld-chatbot-wildcard qcld_simple_txt_response"  data-strid="'+ obj.id +'">'+ obj.query +'</span>';
+                                        });
+                                        wpwMsg.double_nobg(wpwKits.randomMsg(globalwpw.settings.obj.did_you_mean),question);
+                                        
+                                    }else{
+                                        
+                                            wpwMsg.single(json.data[0].response);
+                                            var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.wildcard_msg);
+                                            if( typeof(json.data[0].followup)!=="undefined" && json.data[0].followup!='' ){
+                                                setTimeout(function(){
+                                                    wpwMsg.single(json.data[0].followup);
+                                                }, globalwpw.settings.preLoadingTime*2);
+                                            }else{
                                                 if(globalwpw.settings.obj.disable_repeatative!=1){
                                                     setTimeout(function(){
-                                                        var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.support_option_again);
-                                                        wpwMsg.double_nobg(serviceOffer,globalwpw.wildcards);
-                                                    },globalwpw.settings.preLoadingTime)
+                                                        wpwMsg.double_nobg(serviceOffer, globalwpw.wildcards);
+                                                    }, globalwpw.settings.preLoadingTime*2);
                                                 }else{
                                                     setTimeout(function(){
                                                         wpwMsg.single_nobg('<span class="qcld-chatbot-wildcard qcld_back_to_start"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
                                                     }, globalwpw.settings.preLoadingTime*2);
                                                 }
-            
-                                                
                                             }
-                
-                                        }else {
-                                            
-                                        var productSucces= wpwKits.randomMsg(globalwpw.settings.obj.product_success)+" <strong>"+msg+"</strong>!";
-                                            wpwMsg.double_nobg(productSucces,response.html);
-                
-                                            if(response.per_page >= response.product_num){
-                                                setTimeout(function () {
-                                                    var searchAgain = wpwKits.randomMsg(globalwpw.settings.obj.product_infinite);
-                                                    wpwMsg.single(searchAgain);
-                                                    //keeping value in localstorage
-                                                    globalwpw.wildCard=20;
-                                                    globalwpw.productStep='search';
-                                                    localStorage.setItem("productStep",  globalwpw.productStep);
-                                                },globalwpw.settings.wildcardsShowTime);
-                                            }	
-                                            
-                                        }
                                         
-                
-                                    });
-
-                            
+                                    }
                                 }else{
+                                    //Default intents site search
+                                    msg = wpwKits.filterStopWords(msg);
 
-                                    if(msg!='' && globalwpw.settings.obj.disable_sitesearch==''){
-                                    
-                                        var data = {'action':'wpbo_search_site','name':globalwpw.hasNameCookie,'keyword':msg};
+                                    if(globalwpw.settings.obj.woocommerce){
+
+                                        var data = {'action':'qcld_wb_chatbot_keyword', 'keyword':msg};
+                                        //Products by string search ajax handler.
                                         if($(globalwpw.settings.messageLastChild+' .wp-chatbot-comment-loader').length==0){
                                             $(globalwpw.settings.messageContainer).append(wpwKits.botPreloader());
                                         }
-                                        wpwKits.ajax(data).done(function (response) {
-                                            var json=$.parseJSON(response);
-                                            if(json.status=='success'){
-                                                $('span[data-wildcart="back"]').remove();
-                                                wpwMsg.single_nobg(json.html+'<span class="qcld-chatbot-wildcard"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
+                                        wpwKits.ajax(data).done(function( response ) {
+                                            if(response.product_num==0){
                                                 
-                                            }else{
-                                                
-                                                var data = {'action':'wpbo_failed_response','name':globalwpw.hasNameCookie,'keyword':msg};
-                                                    wpwKits.ajax(data).done(function (res) {
-                                                        //
-                                                    })
-                                                
-                                                if(globalwpw.counter == globalwpw.settings.obj.no_result_attempt_count || globalwpw.settings.obj.no_result_attempt_count == 0 ){
+                                                if(msg!='' && globalwpw.settings.obj.disable_sitesearch==''){
+                                        
+                                                    var data = {'action':'wpbo_search_site','name':globalwpw.hasNameCookie,'keyword':msg};
+                                                    if($(globalwpw.settings.messageLastChild+' .wp-chatbot-comment-loader').length==0){
+                                                        $(globalwpw.settings.messageContainer).append(wpwKits.botPreloader());
+                                                    }
+                                                    wpwKits.ajax(data).done(function (response) {
+                                                        var json=$.parseJSON(response);
+                                                        if(json.status=='success'){
+                                                            $('span[data-wildcart="back"]').remove();
+                                                            wpwMsg.single_nobg(json.html+'<span class="qcld-chatbot-wildcard"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
+                                                            
+                                                        }else{
+                                                            
+                                                            var data = {'action':'wpbo_failed_response','name':globalwpw.hasNameCookie,'keyword':msg};
+                                                                wpwKits.ajax(data).done(function (res) {
+                                                                    //
+                                                                })
+                                                            
+                                                            if(globalwpw.counter == globalwpw.settings.obj.no_result_attempt_count || globalwpw.settings.obj.no_result_attempt_count == 0 ){
+                                                                    
+                                                                wpwMsg.single(wpwKits.randomMsg(json.html));
+                                                                
+                                                                    setTimeout(function(){
+                                                                        var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.support_option_again);
+                                                                        wpwMsg.double_nobg(serviceOffer,globalwpw.wildcards);
+                                                                    },globalwpw.settings.preLoadingTime)
+                                                                
+                                                                globalwpw.counter = 0;
+                                                                
+                                                            }else{
+                                                                globalwpw.counter++;
+                                                                wpwMsg.single(wpwKits.randomMsg(json.html));
+                                                            }
                                                         
-                                                    wpwMsg.single(wpwKits.randomMsg(json.html));
+                                                        }
+                                                        globalwpw.wildCard=0;
+                                                    });
+                                                }else{
+                                                    globalwpw.wildCard=0;
+                                                    wpwMsg.single(wpwKits.randomMsg(globalwpw.settings.obj.empty_filter_msg));
                                                     
+                                                    if(globalwpw.settings.obj.disable_repeatative!=1){
                                                         setTimeout(function(){
                                                             var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.support_option_again);
                                                             wpwMsg.double_nobg(serviceOffer,globalwpw.wildcards);
                                                         },globalwpw.settings.preLoadingTime)
+                                                    }else{
+                                                        setTimeout(function(){
+                                                            wpwMsg.single_nobg('<span class="qcld-chatbot-wildcard qcld_back_to_start"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
+                                                        }, globalwpw.settings.preLoadingTime*2);
+                                                    }
+                
                                                     
-                                                    globalwpw.counter = 0;
+                                                }
+                    
+                                            }else {
+                                                
+                                            var productSucces= wpwKits.randomMsg(globalwpw.settings.obj.product_success)+" <strong>"+msg+"</strong>!";
+                                                wpwMsg.double_nobg(productSucces,response.html);
+                    
+                                                if(response.per_page >= response.product_num){
+                                                    setTimeout(function () {
+                                                        var searchAgain = wpwKits.randomMsg(globalwpw.settings.obj.product_infinite);
+                                                        wpwMsg.single(searchAgain);
+                                                        //keeping value in localstorage
+                                                        globalwpw.wildCard=20;
+                                                        globalwpw.productStep='search';
+                                                        localStorage.setItem("productStep",  globalwpw.productStep);
+                                                    },globalwpw.settings.wildcardsShowTime);
+                                                }	
+                                                
+                                            }
+                                            
+                    
+                                        });
+
+                                
+                                    }else{
+
+                                        if(msg!='' && globalwpw.settings.obj.disable_sitesearch==''){
+                                        
+                                            var data = {'action':'wpbo_search_site','name':globalwpw.hasNameCookie,'keyword':msg};
+                                            if($(globalwpw.settings.messageLastChild+' .wp-chatbot-comment-loader').length==0){
+                                                $(globalwpw.settings.messageContainer).append(wpwKits.botPreloader());
+                                            }
+                                            wpwKits.ajax(data).done(function (response) {
+                                                var json=$.parseJSON(response);
+                                                if(json.status=='success'){
+                                                    $('span[data-wildcart="back"]').remove();
+                                                    wpwMsg.single_nobg(json.html+'<span class="qcld-chatbot-wildcard"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
                                                     
                                                 }else{
-                                                    globalwpw.counter++;
-                                                    wpwMsg.single(wpwKits.randomMsg(json.html));
+                                                    
+                                                    var data = {'action':'wpbo_failed_response','name':globalwpw.hasNameCookie,'keyword':msg};
+                                                        wpwKits.ajax(data).done(function (res) {
+                                                            //
+                                                        })
+                                                    
+                                                    if(globalwpw.counter == globalwpw.settings.obj.no_result_attempt_count || globalwpw.settings.obj.no_result_attempt_count == 0 ){
+                                                            
+                                                        wpwMsg.single(wpwKits.randomMsg(json.html));
+                                                        
+                                                            setTimeout(function(){
+                                                                var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.support_option_again);
+                                                                wpwMsg.double_nobg(serviceOffer,globalwpw.wildcards);
+                                                            },globalwpw.settings.preLoadingTime)
+                                                        
+                                                        globalwpw.counter = 0;
+                                                        
+                                                    }else{
+                                                        globalwpw.counter++;
+                                                        wpwMsg.single(wpwKits.randomMsg(json.html));
+                                                    }
+                                                
                                                 }
-                                               
-                                            }
-                                            globalwpw.wildCard=0;
-                                        });
-                                    }else{
-                                        globalwpw.wildCard=0;
-                                        wpwMsg.single(wpwKits.randomMsg(globalwpw.settings.obj.empty_filter_msg));
-                                        
-                                        if(globalwpw.settings.obj.disable_repeatative!=1){
-                                            setTimeout(function(){
-                                                var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.support_option_again);
-                                                wpwMsg.double_nobg(serviceOffer,globalwpw.wildcards);
-                                            },globalwpw.settings.preLoadingTime)
+                                                globalwpw.wildCard=0;
+                                            });
                                         }else{
-                                            setTimeout(function(){
-                                                wpwMsg.single_nobg('<span class="qcld-chatbot-wildcard qcld_back_to_start"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
-                                            }, globalwpw.settings.preLoadingTime*2);
+                                            globalwpw.wildCard=0;
+                                            wpwMsg.single(wpwKits.randomMsg(globalwpw.settings.obj.empty_filter_msg));
+                                            
+                                            if(globalwpw.settings.obj.disable_repeatative!=1){
+                                                setTimeout(function(){
+                                                    var serviceOffer=wpwKits.randomMsg(globalwpw.settings.obj.support_option_again);
+                                                    wpwMsg.double_nobg(serviceOffer,globalwpw.wildcards);
+                                                },globalwpw.settings.preLoadingTime)
+                                            }else{
+                                                setTimeout(function(){
+                                                    wpwMsg.single_nobg('<span class="qcld-chatbot-wildcard qcld_back_to_start"  data-wildcart="back">' + wpwKits.randomMsg(globalwpw.settings.obj.back_to_start) + '</span>');
+                                                }, globalwpw.settings.preLoadingTime*2);
+                                            }
+        
+                                            
                                         }
-    
-                                        
                                     }
+
                                 }
-
-                            }
-                               
-                        })
-                      } //
-							
-                }
-
-
-                if(globalwpw.settings.obj.woocommerce){
-                    //Product
-                    if(globalwpw.wildCard==20){
-                        
-                        wpwTree.product(msg);
+                                
+                            })
+                        } //
+                                
                     }
 
-                    /*
-                    *   order status part
-                    *   bot action
-                    */
-                    if(globalwpw.wildCard==21){
-                        wpwTree.order(msg);
-                    }
-                }
-              
-                if(globalwpw.wildCard==1){
-                    wpwTree.support(msg);
-                }
-				if(globalwpw.wildCard==3){
-                    wpwTree.subscription(msg);
-                }
-                if(globalwpw.wildCard==6){
-                    wpwTree.unsubscription(msg);
-                }
 
-                if(globalwpw.wildCard==7){
-                    wpwTree.formbuilder(msg);
-                }
-                if(globalwpw.wildCard==9){
-                    wpwTree.bargain(msg);
-                }
-				if(globalwpw.wildCard==25){
-                    wpwTree.reset(msg);
-                }
+                    if(globalwpw.settings.obj.woocommerce){
+                        //Product
+                        if(globalwpw.wildCard==20){
+                            
+                            wpwTree.product(msg);
+                        }
+
+                        /*
+                        *   order status part
+                        *   bot action
+                        */
+                        if(globalwpw.wildCard==21){
+                            wpwTree.order(msg);
+                        }
+                    }
                 
-                if(globalwpw.wildCard==26){
-                    wpwTree.dfcx(msg);
-                }
-                if(globalwpw.wildCard==30){
-                    wpwTree.ldsuggestion();
-                }
+                    if(globalwpw.wildCard==1){
+                        wpwTree.support(msg);
+                    }
+                    if(globalwpw.wildCard==3){
+                        wpwTree.subscription(msg);
+                    }
+                    if(globalwpw.wildCard==6){
+                        wpwTree.unsubscription(msg);
+                    }
 
-            }
+                    if(globalwpw.wildCard==7){
+                        wpwTree.formbuilder(msg);
+                    }
+                    if(globalwpw.wildCard==9){
+                        wpwTree.bargain(msg);
+                    }
+                    if(globalwpw.wildCard==25){
+                        wpwTree.reset(msg);
+                    }
+                    
+                    if(globalwpw.wildCard==26){
+                        wpwTree.dfcx(msg);
+                    }
+                    if(globalwpw.wildCard==30){
+                        wpwTree.ldsuggestion();
+                    }
+
+                }
+        },
+        clickstr: function(id){
+            var data = {'action':'wpbo_search_response','name':globalwpw.hasNameCookie,'strid':id, 'language':globalwpw.settings.obj.language}; 
+            wpwKits.ajax(data).done(function (response) {
+                
+                var json=$.parseJSON(response);
+                if(json.status=='success'){
+                    if(typeof(json.data)!=="undefined" && json.data){
+                        
+                        var question='';
+                        $.each(json.data, function (i, obj) {
+                            console.log(obj.response)
+                            question += obj.response;
+                        });
+                        
+                        wpwMsg.single(question);
+                
+                    }
+                }
+            })
         },
         shopper:function (msg) {
             wpwMsg.shopper(msg);
@@ -2174,7 +2191,8 @@ var wpwKits;
             }
             if(wildcardData=='back'){
                 globalwpw.wildCard=0;
-                wpwAction.bot('start');
+                //wpwAction.bot('start');
+                wpwAction.bot(wpwKits.render(globalwpw.settings.obj.sys_key_help).toLowerCase());
                 //keeping value in localstorage
                 localStorage.setItem("wildCard",  globalwpw.wildCard);
             }
@@ -2203,8 +2221,9 @@ var wpwKits;
 		$(document).on('click','.qcld_simple_txt_response',function(e){
             e.preventDefault();
             var text=$(this).text();
+            var id = $(this).data('strid');
             globalwpw.wildCard=0;            
-            wpwAction.bot(text);
+            wpwAction.clickstr(id);
         })
         $(document).on('click','#wp-chatbot-desktop-reload',function (e) {
             e.preventDefault();
@@ -2622,14 +2641,15 @@ var wpwKits;
             e.preventDefault();
             var actionType=$(this).attr('reset-data');
             if(actionType=='yes'){
+                console.log(actionType)
                 $('#wp-chatbot-messages-container').html('');
                 localStorage.removeItem('shopper');
                 globalwpw.wildCard=0;
                 globalwpw.ai_step=0;
                 localStorage.setItem("wildCard",  globalwpw.wildCard);
                 localStorage.setItem("aiStep", globalwpw.ai_step);
-				
-				globalwpw.formfieldid = '';
+
+                globalwpw.formfieldid = '';
                 localStorage.setItem("formfieldid",  globalwpw.formfieldid);
                 globalwpw.formStep='welcome';
                 localStorage.setItem("formStep",  globalwpw.formStep);
@@ -2637,8 +2657,17 @@ var wpwKits;
                 localStorage.setItem("formid",  globalwpw.formid);
                 globalwpw.formentry = 0;
                 localStorage.setItem("formentry",  globalwpw.formentry);
-				
-                $.wpwbot({obj: wp_chatbot_obj, editor_handler: 0, preLoadingTime: wp_chatbot_obj.botpreloadingtime});
+
+                localStorage.removeItem("cx-name" );
+                localStorage.removeItem("cx-diaplayname" );
+                localStorage.removeItem("cx-languagecode" );
+                localStorage.removeItem("cx-timezone" );
+				var number = Math.random() // 0.9394456857981651
+                number.toString(36); // '0.xtis06h6'
+                var id = number.toString(36).substr(2); // 'xtis06h6'
+
+                localStorage.setItem('botsessionid', id);
+                wpwWelcome.greeting();
             } else if(actionType=='no'){
                 wpwAction.bot(globalwpw.settings.obj.sys_key_help.toLowerCase());
             }
