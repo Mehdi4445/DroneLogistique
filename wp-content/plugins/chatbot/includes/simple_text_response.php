@@ -93,7 +93,7 @@ global $wpdb;
 						<th scope="row"><?php esc_html_e('Query', 'wpbot'); ?></th>
 						<td>
 							<input name="str_nonce" type="hidden" value="<?=wp_create_nonce('str-nonce')?>" />
-							<input type="text" name="qc_bot_str_query" value="<?php echo ($hasEdit?$data->query:''); ?>" style="width: 400px;" required />
+							<input type="text" name="qc_bot_str_query" value="<?php echo esc_attr($hasEdit?$data->query:''); ?>" style="width: 400px;" required />
 							<br><i><?php esc_html_e('*Required. Add the query here. ', 'wpbot'); ?></i>
 						</td>
 					</tr>
@@ -108,7 +108,7 @@ global $wpdb;
 					<tr valign="top">
 						<th scope="row">Keyword</th>
 						<td>
-							<input type="text" name="qc_bot_str_keyword" value="<?php echo ($hasEdit?$data->keyword:''); ?>" style="width: 400px;" />
+							<input type="text" name="qc_bot_str_keyword" value="<?php echo esc_attr($hasEdit?$data->keyword:''); ?>" style="width: 400px;" />
 							<br><i> <?php esc_html_e('Optional. Add multiple keyword or phrases as comma(,) seperated value. It will help to find the best match result.', 'wpbot'); ?></i>
 						</td>
 					</tr>
@@ -116,11 +116,11 @@ global $wpdb;
 					<tr valign="top">
 						<th scope="row"><?php esc_html_e('Intent', 'wpbot'); ?></th>
 						<td>	
-						<input type="text" name="qc_bot_str_intent" value="<?php echo ($hasEdit?$data->intent:''); ?>" style="width: 400px;" />
+						<input type="text" name="qc_bot_str_intent" value="<?php echo esc_attr($hasEdit?$data->intent:''); ?>" style="width: 400px;" />
 							<br><i> <?php esc_html_e('Optional. Single keyword or Phrase. Leave it empty if you do not need to use this response as a intent. This will add as a custom intent in every intent selection field in wpbot settings. Also the intent can be used as system command to trigger the response.', 'wpbot'); ?></i>
 						<?php if($hasEdit): ?>
 
-						<input type="hidden" name="qc_bot_str_id" value="<?php echo ($data->id); ?>" />
+						<input type="hidden" name="qc_bot_str_id" value="<?php echo esc_attr($data->id); ?>" />
 
 						<?php endif; ?>
 						</td>

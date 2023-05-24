@@ -481,7 +481,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                   <div class="<?php esc_attr_e( 'cxsc-settings-blocks',  'wpbot' );  ?> ">
                     <input value="<?php esc_attr_e('1', 'wpbot'); ?>" id="<?php esc_attr_e( 'show_menu_after_greetings',  'wpbot' );  ?>" type="checkbox"
                                                    name="show_menu_after_greetings" <?php echo(get_option('show_menu_after_greetings') == 1 ?  esc_attr('checked' ): ''); ?>>
-                    <label for="show_menu_after_greetings',  'wpbot' );  ?> "><?php esc_html_e('Show Start Menu After Greetings', 'wpbot'); ?> </label>
+                    <label for="<?php esc_html_e('show_menu_after_greetings',  'wpbot' );  ?> "><?php esc_html_e('Show Start Menu After Greetings', 'wpbot'); ?> </label>
                   </div>
                 </div>
               </div>
