@@ -477,11 +477,15 @@ if ( ! defined( 'ABSPATH' ) ) {
               </div>
               <div class="<?php esc_attr_e( 'row',  'wpbot' );  ?> ">
                 <div class="<?php esc_attr_e( 'col-xs-12',  'wpbot' );  ?> ">
-                  <h4 class="<?php esc_attr_e( 'qc-opt-title',  'wpbot' );  ?> "> <?php esc_html_e('Show Start Menu After Greetings', 'wpbot'); ?> </h4>
+                  <h4 class="<?php esc_attr_e( 'qc-opt-title',  'wpbot' );  ?> "> 
+                      <?php esc_html_e('Show Start Menu After Greetings', 'wpbot'); ?> 
+                  </h4>
                   <div class="<?php esc_attr_e( 'cxsc-settings-blocks',  'wpbot' );  ?> ">
                     <input value="<?php esc_attr_e('1', 'wpbot'); ?>" id="<?php esc_attr_e( 'show_menu_after_greetings',  'wpbot' );  ?>" type="checkbox"
-                                                   name="show_menu_after_greetings" <?php echo(get_option('show_menu_after_greetings') == 1 ?  esc_attr('checked' ): ''); ?>>
-                    <label for="<?php esc_html_e('show_menu_after_greetings',  'wpbot' );  ?> "><?php esc_html_e('Show Start Menu After Greetings', 'wpbot'); ?> </label>
+                                                   name="show_menu_after_greetings" <?php echo (get_option('show_menu_after_greetings') == 1 ?  esc_attr('checked' ): ''); ?>>
+                    <label for="<?php esc_html_e('show_menu_after_greetings',  'wpbot' );  ?>">
+                        <?php esc_html_e('Show Start Menu After Greetings', 'wpbot'); ?>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -493,7 +497,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                   </h4>
                   <div class="<?php esc_attr_e( 'cxsc-settings-blocks',  'wpbot' );  ?> ">
                     <input value="<?php esc_attr_e('1', 'wpbot'); ?>" id="<?php esc_attr_e( 'enable_wp_chatbot_mobile_full_screen',  'wpbot' );  ?>" type="checkbox"
-                                                   name="enable_wp_chatbot_mobile_full_screen" <?php echo(get_option('enable_wp_chatbot_mobile_full_screen') == 1 ? esc_attr('checked' ): ''); ?>>
+                                                   name="enable_wp_chatbot_mobile_full_screen" <?php echo (get_option('enable_wp_chatbot_mobile_full_screen') == 1 ? esc_attr('checked' ): ''); ?>>
                     <label for="<?php esc_attr_e( 'enable_wp_chatbot_mobile_full_screen',  'wpbot' );  ?>">
                       <?php esc_html_e('Enable WpBot Open Full Screen in Mobile', 'wpbot'); ?>
                     </label>
@@ -1659,7 +1663,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                       </div>
                       <div class="<?php esc_attr_e( 'form-group',  'wpbot' );  ?> ">
                         <?php
-                                                    $help_welcome_options = maybe_unserialize(get_option('qlcd_wp_chatbot_help_welcome'));
+                                                    $help_welcome_options = maybe_unserialize(wp_kses_post(get_option('qlcd_wp_chatbot_help_welcome')));
                                                     $help_welcome_option = 'qlcd_wp_chatbot_help_welcome';
                                                     $help_welcome_text = esc_html('Welcome to Help Section');
                                                     $this->qcld_wb_chatbot_dynamic_multi_option($help_welcome_options, $help_welcome_option, $help_welcome_text);
@@ -1667,7 +1671,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                       </div>
                       <div class="<?php esc_attr_e( 'form-group',  'wpbot' );  ?> ">
                         <?php
-                                                    $help_msg_options = maybe_unserialize(get_option('qlcd_wp_chatbot_help_msg'));
+                                                    $help_msg_options = maybe_unserialize(wp_kses_post(get_option('qlcd_wp_chatbot_help_msg')));
                                                     $help_msg_option = 'qlcd_wp_chatbot_help_msg';
                                                     $help_msg_text = '<h3>Type and Hit Enter</h3>  1. <b>start</b> Get back to the main menu. <br>  2. <b>faq</b> for  FAQ. <br> 3. <b>eMail </b> to Send eMail <br> 4. <b>reset</b> To clear chat history and start from the beginning.';
                                                     $this->qcld_wb_chatbot_dynamic_multi_option($help_msg_options, $help_msg_option, $help_msg_text);
@@ -1675,7 +1679,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                       </div>
                       <div class="<?php esc_attr_e( 'form-group',  'wpbot' );  ?> ">
                         <?php
-                                                    $reset_options = maybe_unserialize(get_option('qlcd_wp_chatbot_reset'));
+                                                    $reset_options = maybe_unserialize(wp_kses_post(get_option('qlcd_wp_chatbot_reset')));
                                                     $reset_option = 'qlcd_wp_chatbot_reset';
                                                     $reset_text = esc_html('Do you want to clear our chat history and start over?' );
                                                     $this->qcld_wb_chatbot_dynamic_multi_option($reset_options, $reset_option, $reset_text);

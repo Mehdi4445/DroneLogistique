@@ -4,7 +4,7 @@ Donate link: https://www.wpbot.pro/
 Tags: bot, chatbot, chatgpt, live chat, openai, contact bot, HelpDesk, FAQ bot, Support bot
 Requires at least: 4.6
 Tested up to: 6.2
-Stable tag: 4.5.5
+Stable tag: 4.5.7
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.wpbot.pro/
@@ -392,6 +392,13 @@ Images, GIFs and Youtube Videos are supprted in the pro version. Pro version als
 2. Simple Text Responses Edit
 
 == Changelog ==
+
+= 4.5.7 =
+# Fixed show start menu after greetings option chekcing
+
+= 4.5.6 =
+# Fixed back to start button
+# Sanitization for chatbot keywords area for admin user role
 
 = 4.5.5 =
 # Sanitization for STR area for admin user role

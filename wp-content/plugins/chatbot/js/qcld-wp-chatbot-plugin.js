@@ -2144,6 +2144,7 @@ var wpwKits;
             var wildcardData=$(this).attr('data-wildcart');
             var shooperChoice=$(this).text();
             wpwMsg.shopper_choice(shooperChoice);
+            console.log(wildcardData)
             //Wild cards handling for bot.
             if(wildcardData=='product'){
                 globalwpw.wildCard=1;
@@ -2192,7 +2193,7 @@ var wpwKits;
             if(wildcardData=='back'){
                 globalwpw.wildCard=0;
                 //wpwAction.bot('start');
-                wpwAction.bot(wpwKits.render(globalwpw.settings.obj.sys_key_help).toLowerCase());
+                wpwAction.bot(wp_chatbot_obj.sys_key_help.toLowerCase());
                 //keeping value in localstorage
                 localStorage.setItem("wildCard",  globalwpw.wildCard);
             }
